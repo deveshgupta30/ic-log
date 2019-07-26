@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>student_portal</class>
+ <widget class="QMainWindow" name="student_portal">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>840</width>
+    <height>680</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>840</width>
+    <height>680</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>840</width>
+    <height>680</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Admin Portal</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>-40</x>
+      <y>-30</y>
+      <width>891</width>
+      <height>731</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:white;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>121</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="../../../../Modified/icons.qrc">:/admin/admin.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>0</y>
+      <width>301</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 28pt &quot;Slate For OnePlus Bk&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Welcome,
+Admin.</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="shutdownButton">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>0</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: transparent;
+border-color:transparent;</string>
+    </property>
+    <property name="text">
+     <string>Sign Out</string>
+    </property>
+    <property name="icon">
+     <iconset resource="../../../../Modified/icons.qrc">
+      <normaloff>:/alert_box/signout.png</normaloff>:/alert_box/signout.png</iconset>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>840</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>Start</string>
+    </property>
+    <widget class="QMenu" name="menuAdd">
+     <property name="title">
+      <string>Add</string>
+     </property>
+     <addaction name="actionAdmin"/>
+     <addaction name="actionComponent"/>
+     <addaction name="actionStudent"/>
+    </widget>
+    <widget class="QMenu" name="menuModify">
+     <property name="title">
+      <string>Modify</string>
+     </property>
+     <addaction name="actionAdmin_2"/>
+     <addaction name="actionComponent_2"/>
+     <addaction name="actionStudent_2"/>
+    </widget>
+    <widget class="QMenu" name="menuDelete">
+     <property name="title">
+      <string>Delete</string>
+     </property>
+     <addaction name="actionAdmin_3"/>
+     <addaction name="actionComponent_3"/>
+     <addaction name="actionStudent_3"/>
+    </widget>
+    <addaction name="menuAdd"/>
+    <addaction name="separator"/>
+    <addaction name="menuModify"/>
+    <addaction name="separator"/>
+    <addaction name="menuDelete"/>
+    <addaction name="separator"/>
+    <addaction name="actionRequest_Components"/>
+    <addaction name="actionComponent_Dues"/>
+    <addaction name="separator"/>
+    <addaction name="actionSign_Out"/>
+   </widget>
+   <widget class="QMenu" name="menuMy_Account">
+    <property name="title">
+     <string>My Account</string>
+    </property>
+    <addaction name="actionView_Profile"/>
+    <addaction name="separator"/>
+    <addaction name="actionChange_Password"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuMy_Account"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <action name="actionRequest_Components">
+   <property name="text">
+    <string>Approve Components</string>
+   </property>
+  </action>
+  <action name="actionView_Profile">
+   <property name="text">
+    <string>View Profile</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+P</string>
+   </property>
+  </action>
+  <action name="actionChange_Password">
+   <property name="text">
+    <string>Change Password</string>
+   </property>
+  </action>
+  <action name="actionComponent_History">
+   <property name="text">
+    <string>Component History</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+   <property name="shortcut">
+    <string>F1</string>
+   </property>
+  </action>
+  <action name="actionAdmin">
+   <property name="text">
+    <string>Admin</string>
+   </property>
+  </action>
+  <action name="actionComponent">
+   <property name="text">
+    <string>Component</string>
+   </property>
+  </action>
+  <action name="actionStudent">
+   <property name="text">
+    <string>Student</string>
+   </property>
+  </action>
+  <action name="actionAdmin_2">
+   <property name="text">
+    <string>Admin</string>
+   </property>
+  </action>
+  <action name="actionComponent_2">
+   <property name="text">
+    <string>Component</string>
+   </property>
+  </action>
+  <action name="actionStudent_2">
+   <property name="text">
+    <string>Student</string>
+   </property>
+  </action>
+  <action name="actionAdmin_3">
+   <property name="text">
+    <string>Admin</string>
+   </property>
+  </action>
+  <action name="actionComponent_3">
+   <property name="text">
+    <string>Component</string>
+   </property>
+  </action>
+  <action name="actionStudent_3">
+   <property name="text">
+    <string>Student</string>
+   </property>
+  </action>
+  <action name="actionComponent_Dues">
+   <property name="text">
+    <string>Component Dues</string>
+   </property>
+  </action>
+  <action name="actionSign_Out">
+   <property name="text">
+    <string>Sign Out</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../../../../Modified/icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>

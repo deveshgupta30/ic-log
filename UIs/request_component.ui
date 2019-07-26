@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>requestComp</class>
+ <widget class="QWidget" name="requestComp">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>650</width>
+    <height>680</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>650</width>
+    <height>680</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>650</width>
+    <height>680</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Request Components</string>
+  </property>
+  <widget class="QPushButton" name="closeButton">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>630</y>
+     <width>101</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#closeButton{
+	font: 57 8pt &quot;Slate For OnePlus Medium&quot;;
+background-color:#0277BD;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+border-radius: 15px;
+}
+#closeButton:hover{
+background-color:#01579B;
+
+}
+#closeButton:pressed{
+background-color:#1A237E;
+}</string>
+   </property>
+   <property name="text">
+    <string>×  CLOSE</string>
+   </property>
+   <property name="shortcut">
+    <string>Esc</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>20</y>
+     <width>371</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>40</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Slate For OnePlus Medium</family>
+     <pointsize>18</pointsize>
+     <weight>7</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);
+font: 57 18pt &quot;Slate For OnePlus Medium&quot;;</string>
+   </property>
+   <property name="text">
+    <string>REQUEST COMPONENTS</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="searchComp">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>90</y>
+     <width>401</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>40</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Slate For OnePlus</family>
+     <pointsize>10</pointsize>
+     <weight>7</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#searchComp{
+background-color: white;
+border-color: #64B5F6;
+border-style: outset;
+border-width: 1px;
+border-radius: 20px;
+font: 57 10pt &quot;Slate For OnePlus&quot;;
+padding: 10px;
+padding-left: 10px;
+}
+#searchComp:hover {
+    border-style: inset;
+}
+#searchComp:focus {
+    background-color: #E3F2FD;
+    border-style: inset;
+}</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="placeholderText">
+    <string>Name of Component</string>
+   </property>
+   <property name="clearButtonEnabled">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>-60</x>
+     <y>-80</y>
+     <width>821</width>
+     <height>781</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+background-color:qlineargradient(spread:pad, x1:0.492, y1:0, x2:0.501925, y2:0.796, stop:0 rgba(40, 53, 147, 255), stop:1 rgba(	131, 185, 255, 255))
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="sugList">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>220</y>
+     <width>310</width>
+     <height>341</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#sugList{font: 57 9pt &quot;Slate For OnePlus Medium&quot;;
+border: 1px solid #002171;
+border-style: outset;
+}
+#sugList:hover{font: 57 9pt &quot;Slate For OnePlus Medium&quot;;
+border: 3px solid #002171;
+}
+</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="submitButton">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>630</y>
+     <width>101</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#submitButton{
+	font: 57 8pt &quot;Slate For OnePlus Medium&quot;;
+background-color:#0277BD;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+border-radius: 15px;
+}
+#submitButton:hover{
+background-color:#01579B;
+
+}
+#submitButton:pressed{
+background-color:#1A237E;
+}</string>
+   </property>
+   <property name="text">
+    <string>✔  SUBMIT</string>
+   </property>
+  </widget>
+  <widget class="QListView" name="reqList">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>220</y>
+     <width>310</width>
+     <height>341</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#reqList{font: 57 9pt &quot;Slate For OnePlus Medium&quot;;
+border: 2px solid #002171;
+border-style: outset;
+}
+#reqList:hover{font: 57 9pt &quot;Slate For OnePlus Medium&quot;;
+border: 3px solid #002171;
+}
+</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>200</y>
+     <width>241</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+	font: 57 8pt &quot;Slate For OnePlus Medium&quot;;
+
+    color: white;
+</string>
+   </property>
+   <property name="text">
+    <string>Component Name Suggestions</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>200</y>
+     <width>101</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+	font: 57 8pt &quot;Slate For OnePlus Medium&quot;;
+
+    color: white;
+</string>
+   </property>
+   <property name="text">
+    <string>Request List</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="registerLab">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>140</y>
+     <width>401</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Slate For OnePlus</family>
+     <pointsize>10</pointsize>
+     <weight>7</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#registerLab{
+background-color: white;
+border-color: #64B5F6;
+border-style: outset;
+border-width: 1px;
+border-radius: 20px;
+font: 57 10pt &quot;Slate For OnePlus&quot;;
+padding: 10px;
+padding-left: 10px;
+}
+#registerLab:hover {
+    border-style: inset;
+}
+#registerLab:focus {
+    background-color: #E3F2FD;
+    border-style: inset;
+}</string>
+   </property>
+   <property name="placeholderText">
+    <string>Lab No.</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>570</y>
+     <width>311</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+	font: 57 8pt &quot;Slate For OnePlus Medium&quot;;
+
+    color: white;
+</string>
+   </property>
+   <property name="text">
+    <string>Double click the Component ID to remove the component from the request list.</string>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>570</y>
+     <width>251</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+	font: 57 8pt &quot;Slate For OnePlus Medium&quot;;
+
+    color: white;
+</string>
+   </property>
+   <property name="text">
+    <string>Click the Component name to add it to the request list.</string>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <zorder>label_2</zorder>
+  <zorder>closeButton</zorder>
+  <zorder>label</zorder>
+  <zorder>searchComp</zorder>
+  <zorder>sugList</zorder>
+  <zorder>submitButton</zorder>
+  <zorder>reqList</zorder>
+  <zorder>label_3</zorder>
+  <zorder>label_4</zorder>
+  <zorder>registerLab</zorder>
+  <zorder>label_6</zorder>
+  <zorder>label_5</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

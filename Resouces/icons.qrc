@@ -1,0 +1,37 @@
+<RCC>
+  <qresource prefix="admin">
+    <file>admin1.png</file>
+    <file>admin.png</file>
+    <file>admin_metro.png</file>
+  </qresource>
+  <qresource prefix="alert_box">
+    <file>signout.png</file>
+    <file>Sign-Alert-icon.png</file>
+  </qresource>
+  <qresource prefix="Buttons">
+    <file>ADMIN BUTTON CLICKED.png</file>
+    <file>ADMIN BUTTON.png</file>
+    <file>STUDENT BUTTON CLICKED.png</file>
+    <file>STUDENT BUTTON.png</file>
+  </qresource>
+  <qresource prefix="Wallpaper">
+    <file>l1.png</file>
+    <file>l2.png</file>
+    <file>l3.png</file>
+    <file>w2.jpg</file>
+    <file>w6.jpg</file>
+    <file>w3.jpg</file>
+    <file>w4.jpg</file>
+    <file>w5.jpg</file>
+    <file>w1.jpg</file>
+    <file>principality_of_monaco-1920x1080.jpg</file>
+    <file>ADRI-111-WIJ_6491.jpg</file>
+    <file>ZYu6P9-Glic.jpg</file>
+    <file>OJ74pFtrYi0.jpg</file>
+  </qresource>
+  <qresource prefix="student">
+    <file>Student1.png</file>
+    <file>Student.png</file>
+    <file>student_metro.png</file>
+  </qresource>
+</RCC>

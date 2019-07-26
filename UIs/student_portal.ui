@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>student_portal</class>
+ <widget class="QMainWindow" name="student_portal">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>840</width>
+    <height>688</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Student Portal</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>840</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>Start</string>
+    </property>
+    <addaction name="actionRequest_Components"/>
+    <addaction name="separator"/>
+    <addaction name="actionSign_Out"/>
+   </widget>
+   <widget class="QMenu" name="menuMy_Account">
+    <property name="title">
+     <string>My Account</string>
+    </property>
+    <addaction name="actionView_Profile"/>
+    <addaction name="separator"/>
+    <addaction name="actionChange_Password"/>
+    <addaction name="separator"/>
+    <addaction name="actionComponent_History"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuMy_Account"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionRequest_Components">
+   <property name="text">
+    <string>Request Components</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionView_Profile">
+   <property name="text">
+    <string>View Profile</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+P</string>
+   </property>
+  </action>
+  <action name="actionChange_Password">
+   <property name="text">
+    <string>Change Password</string>
+   </property>
+  </action>
+  <action name="actionComponent_History">
+   <property name="text">
+    <string>Borrowed Components</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+   <property name="shortcut">
+    <string>F1</string>
+   </property>
+  </action>
+  <action name="actionSign_Out">
+   <property name="text">
+    <string>Sign Out</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>

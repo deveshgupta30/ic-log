@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>400</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>400</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Admin Login</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="icons.qrc">
+    <normaloff>:/admin/admin.png</normaloff>
+    <normalon>:/admin/admin.png</normalon>:/admin/admin.png</iconset>
+  </property>
+  <property name="autoFillBackground">
+   <bool>true</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QPushButton" name="login">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>430</y>
+     <width>100</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Slate For OnePlus Medium</family>
+     <pointsize>-1</pointsize>
+     <weight>7</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+#login{
+	font: 57 8pt &quot;Slate For OnePlus Medium&quot;;
+background-color:qlineargradient(spread:pad, x1:0.462, y1:1, x2:0.487, y2:0, stop:0 rgba(0, 41, 132, 255), stop:1 rgba(66, 165, 245, 255));
+    color: white;
+    padding: 5px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+border-radius: 5px;
+}
+#login:hover{
+background-color:#01579B;
+
+}
+#login:pressed{
+background-color:#1A237E;
+}</string>
+   </property>
+   <property name="text">
+    <string>LOGIN</string>
+   </property>
+   <property name="shortcut">
+    <string>Return</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="f_pass">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>480</y>
+     <width>141</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <underline>true</underline>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(0, 174, 255);
+background-color: transparent;
+border-color: transparent;
+selection-color: transparent;
+selection-background-color:transparent;
+gridline-color: transparent;</string>
+   </property>
+   <property name="text">
+    <string>Forgot Password?</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>120</y>
+     <width>401</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 57 22pt &quot;Slate For OnePlus Medium&quot;;
+background-color: transparent;
+border-color: transparent;
+
+color: #00004f</string>
+   </property>
+   <property name="text">
+    <string>Hello there, Admin!</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>180</y>
+     <width>111</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="icons.qrc">:/admin/admin1.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>401</width>
+     <height>601</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="icons.qrc">:/Wallpaper/l1.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="username">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>320</y>
+     <width>250</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#username{
+background-color: white;
+border-bottom-color: #001970;
+border-top-color: transparent;
+border-left-color: transparent;
+border-right-color: transparent;
+border-style: outset;
+border-width: 2px;
+font: 57 10pt &quot;Slate For OnePlus&quot;;
+padding: 6px;
+padding-left: 15px;
+}
+#username:hover {
+    border-style: inset;
+}
+#username:focus {
+    background-color: #E3F2FD;
+    border-style: inset;
+}</string>
+   </property>
+   <property name="placeholderText">
+    <string>E-Mail/Employee ID</string>
+   </property>
+   <property name="clearButtonEnabled">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="password">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>370</y>
+     <width>250</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#password{
+background-color: white;
+border-bottom-color: #001970;
+border-top-color: transparent;
+border-left-color: transparent;
+border-right-color: transparent;
+border-style: outset;
+border-width: 2px;
+font: 57 10pt &quot;Slate For OnePlus&quot;;
+padding: 6px;
+padding-left: 15px;
+}
+#password:hover {
+    border-style: inset;
+}
+#password:focus {
+    background-color: #E3F2FD;
+    border-style: inset;
+}</string>
+   </property>
+   <property name="placeholderText">
+    <string>Password</string>
+   </property>
+   <property name="clearButtonEnabled">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <zorder>label_2</zorder>
+  <zorder>login</zorder>
+  <zorder>f_pass</zorder>
+  <zorder>label</zorder>
+  <zorder>label_3</zorder>
+  <zorder>username</zorder>
+  <zorder>password</zorder>
+ </widget>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>

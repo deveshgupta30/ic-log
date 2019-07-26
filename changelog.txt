@@ -1,0 +1,11 @@
+Disabled Confirm button on Add Student, Comp, Admin by default
+Added current stock in Modify Component window
+Made employeeID as PK for admin modify(reason ask)
+Added delete windows
+Changed Admin amd Student Login Background
+-Added blur
+Added About Window
+Added DELETE WARNING Window
+Added Get IDS via Name Windows
+Added Change Password Window
+Added transperancy to Admin and Student Icons
