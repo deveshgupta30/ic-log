@@ -6,14 +6,17 @@ Created on Sun Nov  4 08:35:58 2018
 """
 
 import mysql.connector
-def addStudent(a):
+def getDatabase():
   mydb = mysql.connector.connect(
-    host="mysql.freehostia.com",
-    user="devgup8_iclog",
-    passwd="Hellohiy0!",
-    database="devgup8_iclog"
+    host="YOUR_HOST_HERE",
+    user="YOUR_USER_NAME",
+    passwd="YOUR_PASSWORD",
+    database="DATABASE_NAME"
   )
-  
+  return mydb
+
+def addStudent(a):
+  mydb=getDatabase()
   mycursor = mydb.cursor()
   mycursor.execute("CREATE DATABASE IF NOT EXISTS devgup8_iclog")
   mycursor.execute("CREATE TABLE IF NOT EXISTS STUDENTS(NAME VARCHAR(100), REG_NO VARCHAR(10) PRIMARY KEY, PH_NO VARCHAR(10), EMAIL VARCHAR(200))")
@@ -25,12 +28,7 @@ def addStudent(a):
   mydb.commit()
 
 def addAdmin(a):
-  mydb = mysql.connector.connect(
-    host="mysql.freehostia.com",
-    user="devgup8_iclog",
-    passwd="Hellohiy0!",
-    database="devgup8_iclog"
-  )
+  mydb=getDatabase()
   
   mycursor = mydb.cursor()
   mycursor.execute("CREATE DATABASE IF NOT EXISTS devgup8_iclog")
@@ -44,10 +42,10 @@ def addAdmin(a):
   
 def addComponent(a):
   mydb = mysql.connector.connect(
-    host="mysql.freehostia.com",
-    user="devgup8_iclog",
-    passwd="Hellohiy0!",
-    database="devgup8_iclog"
+    host="YOUR_HOST_HERE",
+    user="YOUR_USER_NAME",
+    passwd="YOUR_PASSWORD",
+    database="DATABASE_NAME"
   )
   
   mycursor = mydb.cursor()
@@ -58,12 +56,7 @@ def addComponent(a):
   mydb.commit()  
 
 def adminLogin(user, password):
-  mydb = mysql.connector.connect(
-    host="mysql.freehostia.com",
-    user="devgup8_iclog",
-    passwd="Hellohiy0!",
-    database="devgup8_iclog"
-  )
+  mydb=getDatabase()
   mycursor = mydb.cursor()
   sql="SELECT PASSWORD FROM ADMIN_LOGIN WHERE %s IN (E_ID, EMAIL)"
   mycursor.execute(sql, [user])
@@ -77,12 +70,7 @@ def adminLogin(user, password):
          return False
 
 def studentLogin(user, password):
-  mydb = mysql.connector.connect(
-    host="mysql.freehostia.com",
-    user="devgup8_iclog",
-    passwd="Hellohiy0!",
-    database="devgup8_iclog"
-  )
+  mydb=getDatabase()
   mycursor = mydb.cursor()
   sql="SELECT PASSWORD FROM STUDENT_LOGIN WHERE %s IN (REG_NO, EMAIL)"
   mycursor.execute(sql, [user])
@@ -96,12 +84,7 @@ def studentLogin(user, password):
          return False
 
 def changePassword(email,password):
-  mydb = mysql.connector.connect(
-    host="mysql.freehostia.com",
-    user="devgup8_iclog",
-    passwd="Hellohiy0!",
-    database="devgup8_iclog"
-  )
+  mydb=getDatabase()
   
   mycursor = mydb.cursor()
 
@@ -111,10 +94,10 @@ def changePassword(email,password):
   
 def changePasswordAdmin(email,password):
   mydb = mysql.connector.connect(
-    host="mysql.freehostia.com",
-    user="devgup8_iclog",
-    passwd="Hellohiy0!",
-    database="devgup8_iclog"
+    host="YOUR_HOST_HERE",
+    user="YOUR_USER_NAME",
+    passwd="YOUR_PASSWORD",
+    database="DATABASE_NAME"
   )
   
   mycursor = mydb.cursor()
@@ -124,12 +107,7 @@ def changePasswordAdmin(email,password):
   mydb.commit()  
 
 def fetchReg_No(a):
-  mydb = mysql.connector.connect(
-    host="mysql.freehostia.com",
-    user="devgup8_iclog",
-    passwd="Hellohiy0!",
-    database="devgup8_iclog"
-  )
+  mydb=getDatabase()
   mycursor = mydb.cursor()
   sql="SELECT REG_NO FROM STUDENT_LOGIN WHERE %s IN (REG_NO, EMAIL)"
   mycursor.execute(sql, [a])
@@ -138,13 +116,7 @@ def fetchReg_No(a):
       return x[0]
 
 def fetchStudentName(a):
-  mydb = mysql.connector.connect(
-    host="mysql.freehostia.com",
-    user="devgup8_iclog",
-    passwd="Hellohiy0!",
-    database="devgup8_iclog"
-  )
-  
+  mydb=getDatabase()
   mycursor = mydb.cursor()
   sql="SELECT NAME FROM STUDENTS WHERE %s = REG_NO"
   mycursor.execute(sql, [a])
@@ -153,12 +125,7 @@ def fetchStudentName(a):
       return x[0]
 
 def fetchCompID(a):
-  mydb = mysql.connector.connect(
-    host="mysql.freehostia.com",
-    user="devgup8_iclog",
-    passwd="Hellohiy0!",
-    database="devgup8_iclog"
-  )
+  mydb=getDatabase()
   mycursor = mydb.cursor()
   sql="SELECT COMP_ID FROM COMPONENTS WHERE %s = NAME"
   mycursor.execute(sql, [a])
@@ -167,12 +134,7 @@ def fetchCompID(a):
       return x[0]
   
 def fetchE_ID(a):
-  mydb = mysql.connector.connect(
-    host="mysql.freehostia.com",
-    user="devgup8_iclog",
-    passwd="Hellohiy0!",
-    database="devgup8_iclog"
-  )
+  mydb=getDatabase()
   mycursor = mydb.cursor()
   sql="SELECT E_ID FROM ADMIN_LOGIN WHERE %s IN (E_ID, EMAIL)"
   mycursor.execute(sql, [a])
@@ -181,12 +143,7 @@ def fetchE_ID(a):
       return x[0]
 
 def fetchAdminName(a):
-  mydb = mysql.connector.connect(
-    host="mysql.freehostia.com",
-    user="devgup8_iclog",
-    passwd="Hellohiy0!",
-    database="devgup8_iclog"
-  )
+  mydb=getDatabase()
   
   mycursor = mydb.cursor()
   sql="SELECT NAME FROM ADMIN WHERE %s = E_ID"
@@ -196,12 +153,7 @@ def fetchAdminName(a):
       return x[0]
    
 def searchCompDB(text):
-  mydb = mysql.connector.connect(
-    host="mysql.freehostia.com",
-    user="devgup8_iclog",
-    passwd="Hellohiy0!",
-    database="devgup8_iclog"
-  )
+  mydb=getDatabase()
   
   mycursor = mydb.cursor()
 
@@ -214,12 +166,7 @@ def searchCompDB(text):
   return a
 
 def searchAdminDB(text):
-  mydb = mysql.connector.connect(
-    host="mysql.freehostia.com",
-    user="devgup8_iclog",
-    passwd="Hellohiy0!",
-    database="devgup8_iclog"
-  )
+  mydb=getDatabase()
   
   mycursor = mydb.cursor()
 
@@ -232,12 +179,7 @@ def searchAdminDB(text):
   return a
 
 def searchStudentDB(text):
-  mydb = mysql.connector.connect(
-    host="mysql.freehostia.com",
-    user="devgup8_iclog",
-    passwd="Hellohiy0!",
-    database="devgup8_iclog"
-  )
+  mydb=getDatabase()
   
   mycursor = mydb.cursor()
 
@@ -250,12 +192,7 @@ def searchStudentDB(text):
   return a
 
 def getComponentStock(comp_id, lab_no):
-  mydb = mysql.connector.connect(
-    host="mysql.freehostia.com",
-    user="devgup8_iclog",
-    passwd="Hellohiy0!",
-    database="devgup8_iclog"
-  )
+  mydb=getDatabase()
   
   mycursor = mydb.cursor()
 
@@ -266,12 +203,7 @@ def getComponentStock(comp_id, lab_no):
       return x[0]
   
 def requestComponent(comp_id,reg_no, lab_no):
-  mydb = mysql.connector.connect(
-    host="mysql.freehostia.com",
-    user="devgup8_iclog",
-    passwd="Hellohiy0!",
-    database="devgup8_iclog"
-  )
+  mydb=getDatabase()
   
   mycursor = mydb.cursor()
 
@@ -281,12 +213,7 @@ def requestComponent(comp_id,reg_no, lab_no):
   mydb.commit()
 
 def issueComponent(comp_id,reg_no, lab_no):
-  mydb = mysql.connector.connect(
-    host="mysql.freehostia.com",
-    user="devgup8_iclog",
-    passwd="Hellohiy0!",
-    database="devgup8_iclog"
-  )
+  mydb=getDatabase()
   
   mycursor = mydb.cursor()
   sql1="DELETE FROM REQ_LIST WHERE COMP_ID = %s AND REG_NO = %s LIMIT 1"
@@ -299,12 +226,7 @@ def issueComponent(comp_id,reg_no, lab_no):
   mydb.commit()
 
 def rejectComponent(comp_id,reg_no, lab_no):
-  mydb = mysql.connector.connect(
-    host="mysql.freehostia.com",
-    user="devgup8_iclog",
-    passwd="Hellohiy0!",
-    database="devgup8_iclog"
-  )
+  mydb=getDatabase()
   
   mycursor = mydb.cursor()
   sql1="DELETE FROM REQ_LIST WHERE COMP_ID = %s AND REG_NO = %s LIMIT 1"
@@ -313,12 +235,7 @@ def rejectComponent(comp_id,reg_no, lab_no):
   mydb.commit()
   
 def returnComponent(comp_id,reg_no, lab_no):
-  mydb = mysql.connector.connect(
-    host="mysql.freehostia.com",
-    user="devgup8_iclog",
-    passwd="Hellohiy0!",
-    database="devgup8_iclog"
-  )
+  mydb=getDatabase()
   
   mycursor = mydb.cursor()
   sql1="DELETE FROM BORROW_LIST WHERE COMP_ID = %s AND REG_NO = %s LIMIT 1"
@@ -329,12 +246,7 @@ def returnComponent(comp_id,reg_no, lab_no):
   
 
 def fetchComponentDetails(a):
-    mydb = mysql.connector.connect(
-    host="mysql.freehostia.com",
-    user="devgup8_iclog",
-    passwd="Hellohiy0!",
-    database="devgup8_iclog"
-  )
+    mydb=getDatabase()
     mycursor = mydb.cursor()
     sql="SELECT COMP_ID ,NAME, STOCK, LAB_NO FROM COMPONENTS WHERE COMP_ID=%s"
     mycursor.execute(sql, [a])
@@ -343,12 +255,7 @@ def fetchComponentDetails(a):
         return x
 
 def fetchStudentDetails(a):
-  mydb = mysql.connector.connect(
-    host="mysql.freehostia.com",
-    user="devgup8_iclog",
-    passwd="Hellohiy0!",
-    database="devgup8_iclog"
-  )
+  mydb=getDatabase()
   mycursor = mydb.cursor()
   sql="SELECT REG_NO,NAME, PH_NO, EMAIL FROM STUDENTS WHERE %s = REG_NO"
   mycursor.execute(sql, [a])
@@ -357,12 +264,7 @@ def fetchStudentDetails(a):
       return x
 
 def fetchAdminDetails(a):
-  mydb = mysql.connector.connect(
-    host="mysql.freehostia.com",
-    user="devgup8_iclog",
-    passwd="Hellohiy0!",
-    database="devgup8_iclog"
-  )
+  mydb=getDatabase()
   mycursor = mydb.cursor()
   sql="SELECT E_ID, NAME, EMAIL, PH_NO, LAB_NO FROM ADMIN WHERE %s = E_ID"
   mycursor.execute(sql, [a])
@@ -371,12 +273,7 @@ def fetchAdminDetails(a):
       return x
    
 def getRequestedComponentsLab(reg_no,lab_no):
-  mydb = mysql.connector.connect(
-    host="mysql.freehostia.com",
-    user="devgup8_iclog",
-    passwd="Hellohiy0!",
-    database="devgup8_iclog"
-  )
+  mydb=getDatabase()
   a=[]
   mycursor = mydb.cursor()    
   sql="SELECT COMP_ID FROM REQ_LIST WHERE REG_NO=%s AND LAB_NO=%s"
@@ -391,12 +288,7 @@ def getRequestedComponentsLab(reg_no,lab_no):
   return a
 
 def getRequestedComponents(reg_no):
-  mydb = mysql.connector.connect(
-    host="mysql.freehostia.com",
-    user="devgup8_iclog",
-    passwd="Hellohiy0!",
-    database="devgup8_iclog"
-  )
+  mydb=getDatabase()
   a=[]
   mycursor = mydb.cursor()    
   sql="SELECT COMP_ID FROM REQ_LIST WHERE REG_NO=%s"
@@ -411,12 +303,7 @@ def getRequestedComponents(reg_no):
   return a
 
 def getBorrowedComponents(reg_no):
-  mydb = mysql.connector.connect(
-    host="mysql.freehostia.com",
-    user="devgup8_iclog",
-    passwd="Hellohiy0!",
-    database="devgup8_iclog"
-  )
+  mydb=getDatabase()
   a=[]
   mycursor = mydb.cursor()    
   sql="SELECT COMP_ID FROM BORROW_LIST WHERE REG_NO=%s"
@@ -431,12 +318,7 @@ def getBorrowedComponents(reg_no):
   return a
     
 def modifyAdmin(a):
-  mydb = mysql.connector.connect(
-    host="mysql.freehostia.com",
-    user="devgup8_iclog",
-    passwd="Hellohiy0!",
-    database="devgup8_iclog"
-  )
+  mydb=getDatabase()
   
   mycursor = mydb.cursor()
 
@@ -447,12 +329,7 @@ def modifyAdmin(a):
   mydb.commit()
   
 def modifyStudent(a):
-  mydb = mysql.connector.connect(
-    host="mysql.freehostia.com",
-    user="devgup8_iclog",
-    passwd="Hellohiy0!",
-    database="devgup8_iclog"
-  )
+  mydb=getDatabase()
   
   mycursor = mydb.cursor()
 
@@ -463,24 +340,14 @@ def modifyStudent(a):
   mydb.commit()
     
 def modifyComponent(a):
-  mydb = mysql.connector.connect(
-    host="mysql.freehostia.com",
-    user="devgup8_iclog",
-    passwd="Hellohiy0!",
-    database="devgup8_iclog"
-  )  
+  mydb=getDatabase() 
   mycursor = mydb.cursor()
   sql="UPDATE COMPONENTS SET NAME=%s, STOCK=%s,LAB_NO=%s WHERE COMP_ID=%s"
   mycursor.execute(sql,a)
   mydb.commit()  
   
 def fetchAdminE_ID(a):
-  mydb = mysql.connector.connect(
-    host="mysql.freehostia.com",
-    user="devgup8_iclog",
-    passwd="Hellohiy0!",
-    database="devgup8_iclog"
-  )
+  mydb=getDatabase()
   
   mycursor = mydb.cursor()
   sql="SELECT E_ID FROM ADMIN WHERE NAME = %s"
@@ -490,12 +357,7 @@ def fetchAdminE_ID(a):
       return x[0]    
   
 def fetchStudentReg(a):
-  mydb = mysql.connector.connect(
-    host="mysql.freehostia.com",
-    user="devgup8_iclog",
-    passwd="Hellohiy0!",
-    database="devgup8_iclog"
-  )
+  mydb=getDatabase()
   
   mycursor = mydb.cursor()
   sql="SELECT REG_NO FROM STUDENTS WHERE NAME = %s"
@@ -506,12 +368,7 @@ def fetchStudentReg(a):
   
 def delAdmin(a):
      
-  mydb = mysql.connector.connect(
-    host="mysql.freehostia.com",
-    user="devgup8_iclog",
-    passwd="Hellohiy0!",
-    database="devgup8_iclog"
-  )
+  mydb=getDatabase()
   
   mycursor = mydb.cursor()
 
@@ -523,12 +380,7 @@ def delAdmin(a):
   
 def delStudent(a):
      
-  mydb = mysql.connector.connect(
-    host="mysql.freehostia.com",
-    user="devgup8_iclog",
-    passwd="Hellohiy0!",
-    database="devgup8_iclog"
-  )
+  mydb=getDatabase()
   
   mycursor = mydb.cursor()
 
@@ -540,12 +392,7 @@ def delStudent(a):
   
 def delComp(a):
      
-  mydb = mysql.connector.connect(
-    host="mysql.freehostia.com",
-    user="devgup8_iclog",
-    passwd="Hellohiy0!",
-    database="devgup8_iclog"
-  )
+  mydb=getDatabase()
   
   mycursor = mydb.cursor()
 
@@ -554,12 +401,7 @@ def delComp(a):
   mydb.commit() 
 
 def getReqStudentList(lab):
-  mydb = mysql.connector.connect(
-    host="mysql.freehostia.com",
-    user="devgup8_iclog",
-    passwd="Hellohiy0!",
-    database="devgup8_iclog"
-  )
+  mydb=getDatabase()
   
   mycursor = mydb.cursor()
 
@@ -576,12 +418,7 @@ def getReqStudentList(lab):
   return a
 
 def getAdminLabNumber(E_id):
-  mydb = mysql.connector.connect(
-    host="mysql.freehostia.com",
-    user="devgup8_iclog",
-    passwd="Hellohiy0!",
-    database="devgup8_iclog"
-  )
+  mydb=getDatabase()
   mycursor = mydb.cursor()
   
   sql="SELECT LAB_NO FROM ADMIN WHERE E_ID = %s"
@@ -592,12 +429,7 @@ def getAdminLabNumber(E_id):
       return x[0]
   
 def getBorrowStudentList(lab):
-  mydb = mysql.connector.connect(
-    host="mysql.freehostia.com",
-    user="devgup8_iclog",
-    passwd="Hellohiy0!",
-    database="devgup8_iclog"
-  )
+  mydb=getDatabase()
   
   mycursor = mydb.cursor()
 
@@ -614,12 +446,7 @@ def getBorrowStudentList(lab):
   return a   
     
 def getComponentsinLab(lab):
-  mydb = mysql.connector.connect(
-    host="mysql.freehostia.com",
-    user="devgup8_iclog",
-    passwd="Hellohiy0!",
-    database="devgup8_iclog"
-  )
+  mydb=getDatabase()
   
   mycursor = mydb.cursor()
 
@@ -632,12 +459,7 @@ def getComponentsinLab(lab):
   return a    
 
 def getNoRequested(labNo):
-  mydb = mysql.connector.connect(
-    host="mysql.freehostia.com",
-    user="devgup8_iclog",
-    passwd="Hellohiy0!",
-    database="devgup8_iclog"
-  )
+  mydb=getDatabase()
   
   mycursor = mydb.cursor()
 
@@ -648,12 +470,7 @@ def getNoRequested(labNo):
       return x[0]  
   
 def getNoBorrowed(labNo):
-  mydb = mysql.connector.connect(
-    host="mysql.freehostia.com",
-    user="devgup8_iclog",
-    passwd="Hellohiy0!",
-    database="devgup8_iclog"
-  )
+  mydb=getDatabase()
   
   mycursor = mydb.cursor()
 
@@ -664,12 +481,7 @@ def getNoBorrowed(labNo):
       return x[0]  
 
 def getNoRequestedStud(reg_no):
-  mydb = mysql.connector.connect(
-    host="mysql.freehostia.com",
-    user="devgup8_iclog",
-    passwd="Hellohiy0!",
-    database="devgup8_iclog"
-  )
+  mydb=getDatabase()
   
   mycursor = mydb.cursor()
 
@@ -680,12 +492,7 @@ def getNoRequestedStud(reg_no):
       return x[0]  
   
 def getNoBorrowedStud(reg_no):
-  mydb = mysql.connector.connect(
-    host="mysql.freehostia.com",
-    user="devgup8_iclog",
-    passwd="Hellohiy0!",
-    database="devgup8_iclog"
-  )
+  mydb=getDatabase()
   
   mycursor = mydb.cursor()
 
