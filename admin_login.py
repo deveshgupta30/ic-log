@@ -13,9 +13,9 @@ from forgot_password_admin import Ui_forgotpassword
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(400, 600)
-        Form.setMinimumSize(QtCore.QSize(400, 600))
-        Form.setMaximumSize(QtCore.QSize(400, 600))
+        Form.resize(411, 601)
+        Form.setMinimumSize(QtCore.QSize(411, 601))
+        Form.setMaximumSize(QtCore.QSize(411, 601))
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/admin/admin.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         icon.addPixmap(QtGui.QPixmap(":/admin/admin.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
@@ -23,10 +23,12 @@ class Ui_Form(object):
         Form.setAutoFillBackground(True)
         Form.setStyleSheet("")
         self.login = QtWidgets.QPushButton(Form)
-        self.login.setGeometry(QtCore.QRect(156, 430, 100, 45))
+        self.login.setGeometry(QtCore.QRect(149, 430, 111, 45))
         font = QtGui.QFont()
         font.setFamily("Slate For OnePlus Medium")
         font.setPointSize(1)
+        Form.setWindowFlags(QtCore.Qt.FramelessWindowHint)
+        Form.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(7)
@@ -51,7 +53,7 @@ class Ui_Form(object):
 "}")
         self.login.setObjectName("login")
         self.f_pass = QtWidgets.QPushButton(Form)
-        self.f_pass.setGeometry(QtCore.QRect(142, 470, 133, 28))
+        self.f_pass.setGeometry(QtCore.QRect(150, 480, 111, 28))
         font = QtGui.QFont()
         font.setFamily("Calibri")
         font.setUnderline(True)
@@ -65,7 +67,7 @@ class Ui_Form(object):
 "gridline-color: transparent;")
         self.f_pass.setObjectName("f_pass")
         self.label = QtWidgets.QLabel(Form)
-        self.label.setGeometry(QtCore.QRect(0, 120, 401, 81))
+        self.label.setGeometry(QtCore.QRect(0, 120, 411, 81))
         self.label.setStyleSheet("font: 57 22pt \"Slate For OnePlus Medium\";\n"
 "background-color: transparent;\n"
 "border-color: transparent;\n"
@@ -74,19 +76,13 @@ class Ui_Form(object):
         self.label.setAlignment(QtCore.Qt.AlignCenter)
         self.label.setObjectName("label")
         self.label_3 = QtWidgets.QLabel(Form)
-        self.label_3.setGeometry(QtCore.QRect(140, 180, 111, 101))
+        self.label_3.setGeometry(QtCore.QRect(150, 190, 111, 111))
         self.label_3.setText("")
         self.label_3.setPixmap(QtGui.QPixmap(":/admin/admin1.png"))
         self.label_3.setScaledContents(True)
         self.label_3.setObjectName("label_3")
-        self.label_2 = QtWidgets.QLabel(Form)
-        self.label_2.setGeometry(QtCore.QRect(0, 0, 401, 601))
-        self.label_2.setText("")
-        self.label_2.setPixmap(QtGui.QPixmap(":/Wallpaper/l1.png"))
-        self.label_2.setScaledContents(True)
-        self.label_2.setObjectName("label_2")
         self.username = QtWidgets.QLineEdit(Form)
-        self.username.setGeometry(QtCore.QRect(80, 320, 250, 40))
+        self.username.setGeometry(QtCore.QRect(79, 320, 251, 40))
         self.username.setStyleSheet("#username{\n"
 "background-color: white;\n"
 "border-bottom-color: #001970;\n"
@@ -109,7 +105,7 @@ class Ui_Form(object):
         self.username.setClearButtonEnabled(True)
         self.username.setObjectName("username")
         self.password = QtWidgets.QLineEdit(Form)
-        self.password.setGeometry(QtCore.QRect(80, 370, 250, 40))
+        self.password.setGeometry(QtCore.QRect(79, 370, 251, 40))
         self.password.setStyleSheet("#password{\n"
 "background-color: white;\n"
 "border-bottom-color: #001970;\n"
@@ -131,6 +127,47 @@ class Ui_Form(object):
 "}")
         self.password.setClearButtonEnabled(True)
         self.password.setObjectName("password")
+        self.label_2 = QtWidgets.QLabel(Form)
+        self.label_2.setGeometry(QtCore.QRect(0, 0, 411, 601))
+        self.label_2.setStyleSheet("#label_2{\n"
+"border-image: url(:/Wallpaper/l1w.png);\n"
+"border-radius: 15px;\n"
+"}")
+        self.label_2.setText("")
+        self.label_2.setScaledContents(True)
+        self.label_2.setObjectName("label_2")
+        self.exitWindow = QtWidgets.QPushButton(Form)
+        self.exitWindow.setGeometry(QtCore.QRect(380, 10, 21, 21))
+        self.exitWindow.setStyleSheet("#exitWindow{\n"
+"border-image: url(:/Window/Circle Close - 01.png);\n"
+"background-color: transparent;\n"
+"}\n"
+"#exitWindow:hover{\n"
+"border-image: url(:/Window/Circle Close - 02.png);\n"
+"background-color: transparent;\n"
+"}\n"
+"#exitWindow:pressed{\n"
+"border-image: url(:/Window/Circle Close - 03.png);\n"
+"background-color: transparent;\n"
+"}")
+        self.exitWindow.setText("")
+        self.exitWindow.setObjectName("exitWindow")
+        self.minWindow = QtWidgets.QPushButton(Form)
+        self.minWindow.setGeometry(QtCore.QRect(350, 10, 21, 21))
+        self.minWindow.setStyleSheet("#minWindow{\n"
+"border-image: url(:/Window/Minus_1.png);\n"
+"background-color: transparent;\n"
+"}\n"
+"#minWindow:hover{\n"
+"border-image: url(:/Window/Minus_2.png);\n"
+"background-color: transparent;\n"
+"}\n"
+"#minWindow:pressed{\n"
+"border-image: url(:/Window/Minus_3.png);\n"
+"background-color: transparent;\n"
+"}")
+        self.minWindow.setText("")
+        self.minWindow.setObjectName("minWindow")
         self.label_2.raise_()
         self.login.raise_()
         self.f_pass.raise_()
@@ -138,23 +175,32 @@ class Ui_Form(object):
         self.label_3.raise_()
         self.username.raise_()
         self.password.raise_()
+        self.exitWindow.raise_()
+        self.minWindow.raise_()
+        self.password.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.exitWindow.clicked.connect(Form.close)
+        self.minWindow.clicked.connect(Form.showMinimized)
         self.login.clicked.connect(lambda: self.checkAdminLogin(Form))
         self.f_pass.clicked.connect(self.openFPass)
         self.retranslateUi(Form)
-        self.password.setEchoMode(QtWidgets.QLineEdit.Password)
         QtCore.QMetaObject.connectSlotsByName(Form)
+
     def checkAdminLogin(self, Form):
         if(is_connected()==False):
             QtWidgets.QMessageBox.about(Form, "Error!", "Please connect to the Internet first!")
         else:
             import db
-            a=db.adminLogin(self.username.text(), self.password.text())
-            if a==True: 
-                self.openAdminPortal(Form)
-            elif a==False:
-                QtWidgets.QMessageBox.about(Form, "Inorrect", "Your password is incorrect")
-            else:
-                QtWidgets.QMessageBox.about(Form, "Error!", a)
+            try:
+                a=db.adminLogin(self.username.text(), self.password.text())
+                if a==True: 
+                    self.openAdminPortal(Form)
+                elif a==False:
+                    QtWidgets.QMessageBox.about(Form, "Inorrect", "Your password is incorrect")
+                else:
+                    QtWidgets.QMessageBox.about(Form, "Error!", a)
+            except:
+                QtWidgets.QMessageBox.about(Form, "Error!", "We are facing some server side technical issues. Please try again later.")
+
     def openAdminPortal(self,Form):
 
         import db
@@ -178,14 +224,14 @@ class Ui_Form(object):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Admin Login"))
         self.login.setText(_translate("Form", "LOGIN"))
+        self.exitWindow.setShortcut(_translate("add_admin", "Esc"))
         self.login.setShortcut(_translate("Form", "Return"))
         self.f_pass.setText(_translate("Form", "Forgot Password?"))
         self.label.setText(_translate("Form", "Hello there, Admin!"))
         self.username.setPlaceholderText(_translate("Form", "E-Mail/Employee ID"))
         self.password.setPlaceholderText(_translate("Form", "Password"))
 
-import socket
-
+import icons_rc, socket
 
 def is_connected():
     try:
@@ -196,8 +242,6 @@ def is_connected():
     except OSError:
         pass
     return False
-
-import icons_rc
 
 if __name__ == "__main__":
     import sys

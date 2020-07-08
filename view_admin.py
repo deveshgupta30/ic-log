@@ -14,14 +14,14 @@ class Ui_delete_admin(object):
         delete_admin.resize(650, 550)
         delete_admin.setMinimumSize(QtCore.QSize(650, 550))
         delete_admin.setMaximumSize(QtCore.QSize(650, 550))
-        self.cancelButton = QtWidgets.QPushButton(delete_admin)
-        self.cancelButton.setGeometry(QtCore.QRect(570, 490, 75, 40))
-        font = QtGui.QFont()
-        font.setFamily("Slate For OnePlus Medium")
-        font.setPointSize(1)
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/admin/admin.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         delete_admin.setWindowIcon(icon)
+        self.cancelButton = QtWidgets.QPushButton(delete_admin)
+        self.cancelButton.setGeometry(QtCore.QRect(560, 490, 75, 40))
+        font = QtGui.QFont()
+        font.setFamily("Slate For OnePlus Medium")
+        font.setPointSize(1)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(7)
@@ -52,7 +52,7 @@ class Ui_delete_admin(object):
 "}")
         self.cancelButton.setObjectName("cancelButton")
         self.formLayoutWidget = QtWidgets.QWidget(delete_admin)
-        self.formLayoutWidget.setGeometry(QtCore.QRect(10, 218, 631, 251))
+        self.formLayoutWidget.setGeometry(QtCore.QRect(20, 266, 631, 221))
         self.formLayoutWidget.setObjectName("formLayoutWidget")
         self.formLayout = QtWidgets.QFormLayout(self.formLayoutWidget)
         self.formLayout.setSizeConstraint(QtWidgets.QLayout.SetDefaultConstraint)
@@ -70,48 +70,6 @@ class Ui_delete_admin(object):
         self.labelName.setStyleSheet("font: 57 12pt \"Slate For OnePlus BK\";")
         self.labelName.setObjectName("labelName")
         self.formLayout.setWidget(2, QtWidgets.QFormLayout.LabelRole, self.labelName)
-        spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.formLayout.setItem(3, QtWidgets.QFormLayout.LabelRole, spacerItem)
-        self.labelEmail = QtWidgets.QLabel(self.formLayoutWidget)
-        self.labelEmail.setMinimumSize(QtCore.QSize(0, 40))
-        font = QtGui.QFont()
-        font.setFamily("Slate For OnePlus BK")
-        font.setPointSize(12)
-        font.setBold(False)
-        font.setItalic(False)
-        font.setWeight(7)
-        self.labelEmail.setFont(font)
-        self.labelEmail.setStyleSheet("font: 57 12pt \"Slate For OnePlus BK\";")
-        self.labelEmail.setObjectName("labelEmail")
-        self.formLayout.setWidget(4, QtWidgets.QFormLayout.LabelRole, self.labelEmail)
-        spacerItem1 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.formLayout.setItem(5, QtWidgets.QFormLayout.LabelRole, spacerItem1)
-        self.labelContact = QtWidgets.QLabel(self.formLayoutWidget)
-        self.labelContact.setMinimumSize(QtCore.QSize(0, 40))
-        font = QtGui.QFont()
-        font.setFamily("Slate For OnePlus BK")
-        font.setPointSize(12)
-        font.setBold(False)
-        font.setItalic(False)
-        font.setWeight(7)
-        self.labelContact.setFont(font)
-        self.labelContact.setStyleSheet("font: 57 12pt \"Slate For OnePlus BK\";")
-        self.labelContact.setObjectName("labelContact")
-        self.formLayout.setWidget(6, QtWidgets.QFormLayout.LabelRole, self.labelContact)
-        spacerItem2 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.formLayout.setItem(7, QtWidgets.QFormLayout.LabelRole, spacerItem2)
-        self.labelLab = QtWidgets.QLabel(self.formLayoutWidget)
-        self.labelLab.setMinimumSize(QtCore.QSize(0, 40))
-        font = QtGui.QFont()
-        font.setFamily("Slate For OnePlus BK")
-        font.setPointSize(12)
-        font.setBold(False)
-        font.setItalic(False)
-        font.setWeight(7)
-        self.labelLab.setFont(font)
-        self.labelLab.setStyleSheet("font: 57 12pt \"Slate For OnePlus BK\";")
-        self.labelLab.setObjectName("labelLab")
-        self.formLayout.setWidget(8, QtWidgets.QFormLayout.LabelRole, self.labelLab)
         self.label_3 = QtWidgets.QLabel(self.formLayoutWidget)
         font = QtGui.QFont()
         font.setFamily("Slate For OnePlus BK")
@@ -124,6 +82,18 @@ class Ui_delete_admin(object):
 " padding: 5px;")
         self.label_3.setObjectName("label_3")
         self.formLayout.setWidget(2, QtWidgets.QFormLayout.FieldRole, self.label_3)
+        self.labelEmail = QtWidgets.QLabel(self.formLayoutWidget)
+        self.labelEmail.setMinimumSize(QtCore.QSize(0, 40))
+        font = QtGui.QFont()
+        font.setFamily("Slate For OnePlus BK")
+        font.setPointSize(12)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(7)
+        self.labelEmail.setFont(font)
+        self.labelEmail.setStyleSheet("font: 57 12pt \"Slate For OnePlus BK\";")
+        self.labelEmail.setObjectName("labelEmail")
+        self.formLayout.setWidget(3, QtWidgets.QFormLayout.LabelRole, self.labelEmail)
         self.label_4 = QtWidgets.QLabel(self.formLayoutWidget)
         font = QtGui.QFont()
         font.setFamily("Slate For OnePlus BK")
@@ -135,7 +105,19 @@ class Ui_delete_admin(object):
         self.label_4.setStyleSheet("font: 57 12pt \"Slate For OnePlus BK\";\n"
 " padding: 5px;")
         self.label_4.setObjectName("label_4")
-        self.formLayout.setWidget(4, QtWidgets.QFormLayout.FieldRole, self.label_4)
+        self.formLayout.setWidget(3, QtWidgets.QFormLayout.FieldRole, self.label_4)
+        self.labelContact = QtWidgets.QLabel(self.formLayoutWidget)
+        self.labelContact.setMinimumSize(QtCore.QSize(0, 40))
+        font = QtGui.QFont()
+        font.setFamily("Slate For OnePlus BK")
+        font.setPointSize(12)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(7)
+        self.labelContact.setFont(font)
+        self.labelContact.setStyleSheet("font: 57 12pt \"Slate For OnePlus BK\";")
+        self.labelContact.setObjectName("labelContact")
+        self.formLayout.setWidget(4, QtWidgets.QFormLayout.LabelRole, self.labelContact)
         self.label_5 = QtWidgets.QLabel(self.formLayoutWidget)
         font = QtGui.QFont()
         font.setFamily("Slate For OnePlus BK")
@@ -147,7 +129,19 @@ class Ui_delete_admin(object):
         self.label_5.setStyleSheet("font: 57 12pt \"Slate For OnePlus BK\";\n"
 " padding: 5px;")
         self.label_5.setObjectName("label_5")
-        self.formLayout.setWidget(6, QtWidgets.QFormLayout.FieldRole, self.label_5)
+        self.formLayout.setWidget(4, QtWidgets.QFormLayout.FieldRole, self.label_5)
+        self.labelLab = QtWidgets.QLabel(self.formLayoutWidget)
+        self.labelLab.setMinimumSize(QtCore.QSize(0, 40))
+        font = QtGui.QFont()
+        font.setFamily("Slate For OnePlus BK")
+        font.setPointSize(12)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(7)
+        self.labelLab.setFont(font)
+        self.labelLab.setStyleSheet("font: 57 12pt \"Slate For OnePlus BK\";")
+        self.labelLab.setObjectName("labelLab")
+        self.formLayout.setWidget(5, QtWidgets.QFormLayout.LabelRole, self.labelLab)
         self.label_6 = QtWidgets.QLabel(self.formLayoutWidget)
         font = QtGui.QFont()
         font.setFamily("Slate For OnePlus BK")
@@ -159,7 +153,7 @@ class Ui_delete_admin(object):
         self.label_6.setStyleSheet("font: 57 12pt \"Slate For OnePlus BK\";\n"
 " padding: 5px;")
         self.label_6.setObjectName("label_6")
-        self.formLayout.setWidget(8, QtWidgets.QFormLayout.FieldRole, self.label_6)
+        self.formLayout.setWidget(5, QtWidgets.QFormLayout.FieldRole, self.label_6)
         self.MAINLABEL = QtWidgets.QLabel(delete_admin)
         self.MAINLABEL.setGeometry(QtCore.QRect(0, 0, 651, 81))
         font = QtGui.QFont()
@@ -172,20 +166,18 @@ class Ui_delete_admin(object):
         self.MAINLABEL.setStyleSheet("font: 57 22pt \"Slate For OnePlus Medium\";\n"
 "color: #ffffff;\n"
 "background-color:#01579B;")
+        self.MAINLABEL.setText("")
         self.MAINLABEL.setAlignment(QtCore.Qt.AlignCenter)
         self.MAINLABEL.setObjectName("MAINLABEL")
         self.label_2 = QtWidgets.QLabel(delete_admin)
-        self.label_2.setGeometry(QtCore.QRect(-30, 82, 731, 551))
-        self.label_2.setStyleSheet("background-color:#ffffff")
+        self.label_2.setGeometry(QtCore.QRect(0, 70, 651, 551))
+        self.label_2.setStyleSheet("background-color:#ffffff;\n"
+"border-radius: 15px;\n"
+"")
         self.label_2.setText("")
         self.label_2.setObjectName("label_2")
-        self.line = QtWidgets.QFrame(delete_admin)
-        self.line.setGeometry(QtCore.QRect(100, 200, 931, 20))
-        self.line.setFrameShape(QtWidgets.QFrame.HLine)
-        self.line.setFrameShadow(QtWidgets.QFrame.Sunken)
-        self.line.setObjectName("line")
         self.searchButton = QtWidgets.QPushButton(delete_admin)
-        self.searchButton.setGeometry(QtCore.QRect(470, 150, 171, 51))
+        self.searchButton.setGeometry(QtCore.QRect(470, 170, 171, 51))
         self.searchButton.setMinimumSize(QtCore.QSize(0, 40))
         self.searchButton.setStyleSheet("#searchButton{\n"
 "    font: 57 8pt \"Slate For OnePlus Medium\";\n"
@@ -206,7 +198,7 @@ class Ui_delete_admin(object):
 "}")
         self.searchButton.setObjectName("searchButton")
         self.labelEid = QtWidgets.QLabel(delete_admin)
-        self.labelEid.setGeometry(QtCore.QRect(10, 110, 121, 40))
+        self.labelEid.setGeometry(QtCore.QRect(10, 120, 141, 40))
         self.labelEid.setMinimumSize(QtCore.QSize(0, 40))
         font = QtGui.QFont()
         font.setFamily("Slate For OnePlus BK")
@@ -218,7 +210,7 @@ class Ui_delete_admin(object):
         self.labelEid.setStyleSheet("font: 57 12pt \"Slate For OnePlus BK\";")
         self.labelEid.setObjectName("labelEid")
         self.enterEid = QtWidgets.QLineEdit(delete_admin)
-        self.enterEid.setGeometry(QtCore.QRect(150, 110, 491, 40))
+        self.enterEid.setGeometry(QtCore.QRect(170, 120, 471, 40))
         self.enterEid.setMinimumSize(QtCore.QSize(300, 40))
         font = QtGui.QFont()
         font.setFamily("Slate For OnePlus")
@@ -246,10 +238,10 @@ class Ui_delete_admin(object):
 "    border-style: inset;\n"
 "}")
         self.enterEid.setText("")
-        self.enterEid.setClearButtonEnabled(True)
+        self.enterEid.setClearButtonEnabled(False)
         self.enterEid.setObjectName("enterEid")
         self.searchEid = QtWidgets.QPushButton(delete_admin)
-        self.searchEid.setGeometry(QtCore.QRect(562, 110, 81, 40))
+        self.searchEid.setGeometry(QtCore.QRect(560, 120, 81, 40))
         self.searchEid.setMinimumSize(QtCore.QSize(0, 40))
         self.searchEid.setStyleSheet("#searchEid{background-color: transparent;\n"
 "border-color: transparent;\n"
@@ -282,40 +274,80 @@ class Ui_delete_admin(object):
 "}")
         self.searchEid.setObjectName("searchEid")
         self.addAdmin = QtWidgets.QPushButton(delete_admin)
-        self.addAdmin.setGeometry(QtCore.QRect(340, 160, 131, 31))
+        self.addAdmin.setGeometry(QtCore.QRect(340, 170, 130, 51))
         self.addAdmin.setStyleSheet("#addAdmin{\n"
+"font: 57 8pt \"Slate For OnePlus Medium\";\n"
+"color:rgb(65, 131, 197);\n"
 "background-color: transparent;\n"
-"border-color:transparent;\n"
-"color: blue;\n"
-"font: 8pt \"Slate For OnePlus Bk\";\n"
-"}\n"
-"#addAdmin:hover{\n"
-"background-color: transparent;\n"
-"border-color:transparent;\n"
-"font: 8pt \"Slate For OnePlus Bk\";\n"
+"border-color: transparent;\n"
+"selection-color: transparent;\n"
+"selection-background-color:transparent;\n"
+"gridline-color: transparent;\n"
 "text-decoration: underline;\n"
 "}\n"
+"#addAdmin:hover{\n"
+"color:rgb(0, 0, 127);\n"
+"    font: 57 8pt \"Slate For OnePlus Medium\";\n"
+"    text-decoration: underline;\n"
+"}\n"
 "#addAdmin:pressed{\n"
-"background-color: transparent;\n"
-"border-color:transparent;\n"
-"color: #29b6f6;\n"
-"font: 8pt \"Slate For OnePlus Bk\";\n"
+"color:purple;\n"
+"    font: 57 8pt \"Slate For OnePlus Medium\";\n"
+"    text-decoration: underline;\n"
 "}")
         self.addAdmin.setObjectName("addAdmin")
-        self.deleteAdmin = QtWidgets.QPushButton(delete_admin)
-        self.deleteAdmin.setGeometry(QtCore.QRect(150, 485, 50, 50))
-        self.deleteAdmin.setStyleSheet("#deleteAdmin {\n"
+        self.modifyAdmin = QtWidgets.QPushButton(delete_admin)
+        self.modifyAdmin.setGeometry(QtCore.QRect(350, 470, 60, 60))
+        self.modifyAdmin.setStyleSheet("#modifyAdmin {\n"
 "background-color:transparent;\n"
+"    border-image: url(:/others/lel_user.png);\n"
 "border-color:transparent;\n"
 "border-style:outset;\n"
-"border-radius:25px;\n"
+"border-radius:30px;\n"
 "}\n"
 "\n"
-"#deleteAdmin:hover {\n"
-"    background-color: red;\n"
+"#modifyAdmin:hover {\n"
+"    background-color:white;\n"
 "    border-color:transparent;\n"
+"    border-radius:30px;\n"
+"    border-image: url(:/others/lel_user_2.png);\n"
+"}\n"
+"\n"
+"#modifyAdmin:pressed {\n"
+"    background-color:#01579B;\n"
 "    border-radius:25px;\n"
+"    border-style:inset;\n"
+"}")
+        self.modifyAdmin.setText("")
+        self.modifyAdmin.setIconSize(QtCore.QSize(50, 50))
+        self.modifyAdmin.setObjectName("modifyAdmin")
+        self.label = QtWidgets.QLabel(delete_admin)
+        self.label.setGeometry(QtCore.QRect(0, 0, 651, 71))
+        self.label.setStyleSheet("font: 57 22pt \"Slate For OnePlus Medium\";\n"
+"color: #ffffff;\n"
+"background-color:transparent;")
+        self.label.setAlignment(QtCore.Qt.AlignCenter)
+        self.label.setObjectName("label")
+        self.line = QtWidgets.QFrame(delete_admin)
+        self.line.setGeometry(QtCore.QRect(20, 250, 611, 4))
+        self.line.setFrameShape(QtWidgets.QFrame.HLine)
+        self.line.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.line.setObjectName("line")
+        self.deleteAdmin = QtWidgets.QPushButton(delete_admin)
+        self.deleteAdmin.setGeometry(QtCore.QRect(160, 470, 60, 60))
+        self.deleteAdmin.setStyleSheet("#deleteAdmin {\n"
+"background-color: transparent;\n"
+"\n"
+"border-style: inset;\n"
+"border-radius:30px;\n"
+"border-image:url(:/others/lel_delete.png);\n"
+"}\n"
+"#deleteAdmin:hover {\n"
+"    background-color: #DC3333;\n"
+"    \n"
+"    border-radius:30px;\n"
 "    border-style:outset;\n"
+"    border-image: url(:/others/lel_delete2.png);\n"
 "}\n"
 "\n"
 "#deleteAdmin:pressed {\n"
@@ -325,62 +357,30 @@ class Ui_delete_admin(object):
 "    border-style:inset;\n"
 "}")
         self.deleteAdmin.setText("")
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(":/others/Delete-Anti-Revoke.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.deleteAdmin.setIcon(icon)
         self.deleteAdmin.setIconSize(QtCore.QSize(50, 50))
         self.deleteAdmin.setObjectName("deleteAdmin")
-        self.modifyAdmin = QtWidgets.QPushButton(delete_admin)
-        self.modifyAdmin.setGeometry(QtCore.QRect(290, 485, 50, 50))
-        self.modifyAdmin.setStyleSheet("#modifyAdmin {\n"
-"background-color:transparent;\n"
-"\n"
-"border-color:transparent;\n"
-"border-style:outset;\n"
-"border-radius:25px;\n"
-"}\n"
-"\n"
-"#modifyAdmin:hover {\n"
-"    background-color:#0277BD;\n"
-"    border-color:transparent;\n"
-"    border-radius:25px;\n"
-"}\n"
-"\n"
-"#modifyAdmin:pressed {\n"
-"    background-color:#01579B;\n"
-"    border-radius:25px;\n"
-"    border-style:inset;\n"
-"}")
-        self.modifyAdmin.setText("")
-        self.deleteAdmin.setEnabled(False)
-        self.modifyAdmin.setEnabled(False)
-
-        icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap(":/others/edit_user-512.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.modifyAdmin.setIcon(icon1)
-        self.modifyAdmin.setIconSize(QtCore.QSize(50, 50))
-        self.modifyAdmin.setObjectName("modifyAdmin")
+        self.MAINLABEL.raise_()
         self.label_2.raise_()
         self.cancelButton.raise_()
         self.formLayoutWidget.raise_()
-        self.MAINLABEL.raise_()
-        self.line.raise_()
         self.searchButton.raise_()
         self.labelEid.raise_()
         self.enterEid.raise_()
         self.searchEid.raise_()
         self.addAdmin.raise_()
-        self.deleteAdmin.raise_()
         self.modifyAdmin.raise_()
+        self.label.raise_()
+        self.line.raise_()
+        self.deleteAdmin.raise_()
         self.searchButton.clicked.connect(lambda: self.searchAdmin(delete_admin))
         self.searchEid.clicked.connect(lambda: self.openSearch(delete_admin))
         self.deleteAdmin.clicked.connect(lambda: self.delete_Admin(delete_admin))
         self.modifyAdmin.clicked.connect(lambda:self.openModifyAdmin(delete_admin))
         self.addAdmin.clicked.connect(lambda:self.openAddAdmin(delete_admin))
         self.cancelButton.clicked.connect(delete_admin.close)
+
         self.retranslateUi(delete_admin)
         QtCore.QMetaObject.connectSlotsByName(delete_admin)
-        
     def openAddAdmin(self,delete_admin):
         from add_admin import Ui_add_admin
         self.window3=QtWidgets.QWidget()
@@ -429,29 +429,30 @@ class Ui_delete_admin(object):
             self.label_6.setText(a[4])
             self.searchEid.setEnabled(False)
             self.deleteAdmin.setEnabled(True)
-            self.modifyAdmin.setEnabled(True)            
+            self.modifyAdmin.setEnabled(True)
+            
     def retranslateUi(self, delete_admin):
         _translate = QtCore.QCoreApplication.translate
         delete_admin.setWindowTitle(_translate("delete_admin", "Admin Details"))
         self.cancelButton.setText(_translate("delete_admin", "CANCEL"))
         self.cancelButton.setShortcut(_translate("delete_admin", "Esc"))
         self.labelName.setText(_translate("delete_admin", "Name:"))
-        self.labelEmail.setText(_translate("delete_admin", "E-Mail ID:"))
-        self.labelContact.setText(_translate("delete_admin", "Contact Number:"))
-        self.labelLab.setText(_translate("delete_admin", "Lab No.:"))
         self.label_3.setText(_translate("delete_admin", "Please enter Employee ID "))
+        self.labelEmail.setText(_translate("delete_admin", "E-Mail ID:"))
         self.label_4.setText(_translate("delete_admin", "Please enter Employee ID "))
+        self.labelContact.setText(_translate("delete_admin", "Contact Number:"))
         self.label_5.setText(_translate("delete_admin", "Please enter Employee ID "))
+        self.labelLab.setText(_translate("delete_admin", "Lab No.:"))
         self.label_6.setText(_translate("delete_admin", "Please enter Employee ID "))
-        self.MAINLABEL.setText(_translate("delete_admin", "Admin Details"))
         self.searchButton.setText(_translate("delete_admin", "Search"))
         self.searchButton.setShortcut(_translate("delete_admin", "Return"))
         self.labelEid.setText(_translate("delete_admin", "Employee ID"))
         self.enterEid.setPlaceholderText(_translate("delete_admin", "Employee ID"))
         self.searchEid.setText(_translate("delete_admin", "GET ID"))
         self.addAdmin.setText(_translate("delete_admin", "Add New Admin?"))
-        self.deleteAdmin.setToolTip(_translate("delete_admin", "<html><head/><body><p>Delete Admin</p></body></html>"))
         self.modifyAdmin.setToolTip(_translate("delete_admin", "<html><head/><body><p>Modify Admin</p></body></html>"))
+        self.label.setText(_translate("delete_admin", "Admin Details"))
+        self.deleteAdmin.setWhatsThis(_translate("delete_admin", "<html><head/><body><p>Delete Component</p></body></html>"))
 
 import icons_rc
 

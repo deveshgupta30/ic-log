@@ -336,7 +336,7 @@ def sendEmail(eMail, OTP):
     import smtplib
     from email.mime.multipart import MIMEMultipart
     from email.mime.text import MIMEText
-    fromaddr = "compmansys@gmail.com"
+    fromaddr = "EMAIL_ADDRESS_HERE"
     toaddr = eMail
     msg = MIMEMultipart()
     msg['From'] = fromaddr
@@ -346,7 +346,7 @@ def sendEmail(eMail, OTP):
     msg.attach(MIMEText(body, 'plain'))
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.starttls()
-    server.login(fromaddr, "cmsadmin")
+    server.login(fromaddr, "PASSWORD_HERE")
     text = msg.as_string()
     server.sendmail(fromaddr, toaddr, text)
     server.quit()

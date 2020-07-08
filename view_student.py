@@ -15,13 +15,13 @@ class Ui_view_student(object):
         view_student.setMinimumSize(QtCore.QSize(650, 550))
         view_student.setMaximumSize(QtCore.QSize(650, 550))
         self.cancelButton = QtWidgets.QPushButton(view_student)
-        self.cancelButton.setGeometry(QtCore.QRect(570, 480, 75, 40))
-        font = QtGui.QFont()
-        font.setFamily("Slate For OnePlus Medium")
-        font.setPointSize(1)
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/admin/admin.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         view_student.setWindowIcon(icon)
+        self.cancelButton.setGeometry(QtCore.QRect(560, 490, 75, 40))
+        font = QtGui.QFont()
+        font.setFamily("Slate For OnePlus Medium")
+        font.setPointSize(1)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(7)
@@ -52,7 +52,7 @@ class Ui_view_student(object):
 "}")
         self.cancelButton.setObjectName("cancelButton")
         self.formLayoutWidget = QtWidgets.QWidget(view_student)
-        self.formLayoutWidget.setGeometry(QtCore.QRect(10, 270, 631, 181))
+        self.formLayoutWidget.setGeometry(QtCore.QRect(20, 291, 621, 161))
         self.formLayoutWidget.setObjectName("formLayoutWidget")
         self.formLayout = QtWidgets.QFormLayout(self.formLayoutWidget)
         self.formLayout.setSizeConstraint(QtWidgets.QLayout.SetDefaultConstraint)
@@ -143,15 +143,11 @@ class Ui_view_student(object):
 "color: #ffffff;\n"
 "background-color:#01579B;font: 30pt \"Calibri\";\n"
 "color: #ffffff")
+        self.MAINLABEL.setText("")
         self.MAINLABEL.setAlignment(QtCore.Qt.AlignCenter)
         self.MAINLABEL.setObjectName("MAINLABEL")
-        self.label_2 = QtWidgets.QLabel(view_student)
-        self.label_2.setGeometry(QtCore.QRect(-30, 82, 731, 551))
-        self.label_2.setStyleSheet("background-color:#ffffff")
-        self.label_2.setText("")
-        self.label_2.setObjectName("label_2")
         self.searchButton = QtWidgets.QPushButton(view_student)
-        self.searchButton.setGeometry(QtCore.QRect(470, 160, 171, 51))
+        self.searchButton.setGeometry(QtCore.QRect(470, 170, 171, 51))
         self.searchButton.setMinimumSize(QtCore.QSize(0, 40))
         self.searchButton.setStyleSheet("#searchButton{\n"
 "    font: 57 8pt \"Slate For OnePlus Medium\";\n"
@@ -172,7 +168,7 @@ class Ui_view_student(object):
 "}")
         self.searchButton.setObjectName("searchButton")
         self.enterRno = QtWidgets.QLineEdit(view_student)
-        self.enterRno.setGeometry(QtCore.QRect(200, 110, 441, 40))
+        self.enterRno.setGeometry(QtCore.QRect(220, 120, 421, 40))
         self.enterRno.setMinimumSize(QtCore.QSize(300, 40))
         font = QtGui.QFont()
         font.setFamily("Slate For OnePlus")
@@ -199,10 +195,10 @@ class Ui_view_student(object):
 "    background-color: #E3F2FD;\n"
 "    border-style: inset;\n"
 "}")
-        self.enterRno.setClearButtonEnabled(True)
+        self.enterRno.setClearButtonEnabled(False)
         self.enterRno.setObjectName("enterRno")
         self.labelRno = QtWidgets.QLabel(view_student)
-        self.labelRno.setGeometry(QtCore.QRect(0, 110, 191, 40))
+        self.labelRno.setGeometry(QtCore.QRect(10, 120, 201, 40))
         self.labelRno.setMinimumSize(QtCore.QSize(0, 40))
         font = QtGui.QFont()
         font.setFamily("Slate For OnePlus BK")
@@ -214,7 +210,7 @@ class Ui_view_student(object):
         self.labelRno.setStyleSheet("font: 57 12pt \"Slate For OnePlus BK\";")
         self.labelRno.setObjectName("labelRno")
         self.searchRgno = QtWidgets.QPushButton(view_student)
-        self.searchRgno.setGeometry(QtCore.QRect(540, 110, 101, 40))
+        self.searchRgno.setGeometry(QtCore.QRect(540, 120, 101, 40))
         self.searchRgno.setMinimumSize(QtCore.QSize(0, 40))
         self.searchRgno.setStyleSheet("#searchRgno{background-color: transparent;\n"
 "border-color: transparent;\n"
@@ -246,48 +242,64 @@ class Ui_view_student(object):
 "color:white\n"
 "}")
         self.searchRgno.setObjectName("searchRgno")
+        self.addStudent = QtWidgets.QPushButton(view_student)
+        self.addStudent.setGeometry(QtCore.QRect(340, 170, 131, 51))
+        self.addStudent.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.addStudent.setStyleSheet("#addStudent{\n"
+"font: 57 8pt \"Slate For OnePlus Medium\";\n"
+"color:rgb(65, 131, 197);\n"
+"background-color: transparent;\n"
+"border-color: transparent;\n"
+"    text-decoration: underline;\n"
+"selection-color: transparent;\n"
+"selection-background-color:transparent;\n"
+"gridline-color: transparent;\n"
+"}\n"
+"#addStudent:hover{\n"
+"color:rgb(0, 0, 127);\n"
+"    font: 57 8pt \"Slate For OnePlus Medium\";\n"
+"    text-decoration: underline;\n"
+"}\n"
+"#addStudent:pressed{\n"
+"color:purple;\n"
+"    font: 57 8pt \"Slate For OnePlus Medium\";\n"
+"    text-decoration: underline;\n"
+"}")
+        self.addStudent.setObjectName("addStudent")
+        self.label = QtWidgets.QLabel(view_student)
+        self.label.setGeometry(QtCore.QRect(0, 0, 651, 71))
+        self.label.setStyleSheet("font: 57 22pt \"Slate For OnePlus Medium\";\n"
+"color: #ffffff;\n"
+"background-color:transparent;")
+        self.label.setAlignment(QtCore.Qt.AlignCenter)
+        self.label.setObjectName("label")
+        self.label_2 = QtWidgets.QLabel(view_student)
+        self.label_2.setGeometry(QtCore.QRect(0, 70, 651, 551))
+        self.label_2.setStyleSheet("background-color:#ffffff;\n"
+"border-radius: 15px;\n"
+"")
+        self.label_2.setText("")
+        self.label_2.setObjectName("label_2")
         self.line = QtWidgets.QFrame(view_student)
-        self.line.setGeometry(QtCore.QRect(100, 240, 800, 3))
+        self.line.setGeometry(QtCore.QRect(20, 250, 611, 4))
         self.line.setFrameShape(QtWidgets.QFrame.HLine)
         self.line.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.line.setObjectName("line")
-        self.addStudent = QtWidgets.QPushButton(view_student)
-        self.addStudent.setGeometry(QtCore.QRect(340, 170, 131, 31))
-        self.addStudent.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.addStudent.setStyleSheet("#addStudent{\n"
-"background-color: transparent;\n"
-"border-color:transparent;\n"
-"color: blue;\n"
-"font: 8pt \"Slate For OnePlus Bk\";\n"
-"}\n"
-"#addStudent:hover{\n"
-"background-color: transparent;\n"
-"border-color:transparent;\n"
-"font: 8pt \"Slate For OnePlus Bk\";\n"
-"text-decoration: underline;\n"
-"}\n"
-"#addStudent:pressed{\n"
-"background-color: transparent;\n"
-"border-color:transparent;\n"
-"color: #29b6f6;\n"
-"font: 8pt \"Slate For OnePlus Bk\";\n"
-"}")
-        self.addStudent.setObjectName("addStudent")
         self.deleteStudent = QtWidgets.QPushButton(view_student)
-        self.deleteStudent.setGeometry(QtCore.QRect(180, 470, 50, 50))
-        self.deleteStudent.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.deleteStudent.setGeometry(QtCore.QRect(110, 470, 60, 60))
         self.deleteStudent.setStyleSheet("#deleteStudent {\n"
-"background-color:transparent;\n"
-"border-color:transparent;\n"
-"border-style:outset;\n"
-"border-radius:25px;\n"
-"}\n"
+"background-color: transparent;\n"
 "\n"
+"border-style: inset;\n"
+"border-radius:30px;\n"
+"border-image:url(:/others/lel_delete.png);\n"
+"}\n"
 "#deleteStudent:hover {\n"
-"    background-color: red;\n"
-"    border-color:transparent;\n"
-"    border-radius:25px;\n"
+"    background-color: #DC3333;\n"
+"    \n"
+"    border-radius:30px;\n"
 "    border-style:outset;\n"
+"    border-image: url(:/others/lel_delete2.png);\n"
 "}\n"
 "\n"
 "#deleteStudent:pressed {\n"
@@ -297,26 +309,22 @@ class Ui_view_student(object):
 "    border-style:inset;\n"
 "}")
         self.deleteStudent.setText("")
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(":/others/Delete-Anti-Revoke.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.deleteStudent.setIcon(icon)
         self.deleteStudent.setIconSize(QtCore.QSize(50, 50))
         self.deleteStudent.setObjectName("deleteStudent")
         self.modifyStudent = QtWidgets.QPushButton(view_student)
-        self.modifyStudent.setGeometry(QtCore.QRect(300, 470, 50, 50))
-        self.modifyStudent.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.modifyStudent.setGeometry(QtCore.QRect(250, 470, 60, 60))
         self.modifyStudent.setStyleSheet("#modifyStudent {\n"
 "background-color:transparent;\n"
-"\n"
+"    border-image: url(:/others/lel_user.png);\n"
 "border-color:transparent;\n"
 "border-style:outset;\n"
-"border-radius:25px;\n"
+"border-radius:30px;\n"
 "}\n"
-"\n"
 "#modifyStudent:hover {\n"
-"    background-color:#0277BD;\n"
+"    background-color:white;\n"
 "    border-color:transparent;\n"
-"    border-radius:25px;\n"
+"    border-radius:30px;\n"
+"    border-image: url(:/others/lel_user_2.png);\n"
 "}\n"
 "\n"
 "#modifyStudent:pressed {\n"
@@ -325,27 +333,23 @@ class Ui_view_student(object):
 "    border-style:inset;\n"
 "}")
         self.modifyStudent.setText("")
-        icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap(":/others/edit_user-512.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.modifyStudent.setIcon(icon1)
         self.modifyStudent.setIconSize(QtCore.QSize(50, 50))
         self.modifyStudent.setObjectName("modifyStudent")
         self.issueComponent = QtWidgets.QPushButton(view_student)
-        self.issueComponent.setGeometry(QtCore.QRect(420, 465, 60, 60))
-        self.issueComponent.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.issueComponent.setGeometry(QtCore.QRect(410, 470, 60, 60))
         self.issueComponent.setStyleSheet("#issueComponent {\n"
 "background-color:transparent;\n"
-"\n"
+"    border-image: url(:/admin/cart.png);\n"
 "border-color:transparent;\n"
 "border-style:outset;\n"
 "border-radius:30px;\n"
 "}\n"
-"\n"
 "#issueComponent:hover {\n"
-"    background-color:#0277BD;\n"
+"    background-color:#087F22;\n"
 "    border-color:transparent;\n"
 "    border-radius:30px;\n"
 "    border-style:outset;\n"
+"    border-image: url(:/admin/cart2.png);\n"
 "}\n"
 "\n"
 "#issueComponent:pressed {\n"
@@ -356,24 +360,19 @@ class Ui_view_student(object):
 "    border-style:inset;\n"
 "}")
         self.issueComponent.setText("")
-        icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap(":/others/cart-add-icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.issueComponent.setIcon(icon2)
         self.issueComponent.setIconSize(QtCore.QSize(50, 50))
         self.issueComponent.setObjectName("issueComponent")
-        self.deleteStudent.setEnabled(False)
-        self.issueComponent.setEnabled(False)
-        self.modifyStudent.setEnabled(False)
+        self.MAINLABEL.raise_()
         self.label_2.raise_()
         self.cancelButton.raise_()
         self.formLayoutWidget.raise_()
-        self.MAINLABEL.raise_()
         self.searchButton.raise_()
         self.enterRno.raise_()
         self.labelRno.raise_()
         self.searchRgno.raise_()
-        self.line.raise_()
         self.addStudent.raise_()
+        self.label.raise_()
+        self.line.raise_()
         self.deleteStudent.raise_()
         self.modifyStudent.raise_()
         self.issueComponent.raise_()
@@ -384,8 +383,10 @@ class Ui_view_student(object):
         self.modifyStudent.clicked.connect(lambda:self.openModifyStudent(view_student))
         self.issueComponent.clicked.connect(lambda:self.openIssueComponent(view_student))
         self.cancelButton.clicked.connect(view_student.close)
+
         self.retranslateUi(view_student)
         QtCore.QMetaObject.connectSlotsByName(view_student)
+
     def openIssueComponent(self, view_student):
         
         from issue_component import Ui_issueComp
@@ -447,10 +448,11 @@ class Ui_view_student(object):
             self.issueComponent.setEnabled(True)
             self.modifyStudent.setEnabled(True)
             
+
     def retranslateUi(self, view_student):
         _translate = QtCore.QCoreApplication.translate
         view_student.setWindowTitle(_translate("view_student", "Student Details"))
-        self.cancelButton.setText(_translate("view_student", "Cancel"))
+        self.cancelButton.setText(_translate("view_student", "CANCEL"))
         self.cancelButton.setShortcut(_translate("view_student", "Esc"))
         self.labelName.setText(_translate("view_student", "Student Name:"))
         self.showName.setText(_translate("view_student", "Please enter Student Registration No."))
@@ -458,15 +460,15 @@ class Ui_view_student(object):
         self.showEmail.setText(_translate("view_student", "Please enter Student Registration No."))
         self.labelContact.setText(_translate("view_student", "Contact Number:"))
         self.showContact.setText(_translate("view_student", "Please enter Student Registration No."))
-        self.MAINLABEL.setText(_translate("view_student", "Student Details"))
         self.searchButton.setText(_translate("view_student", "Search"))
         self.enterRno.setPlaceholderText(_translate("view_student", "Registration No."))
-        self.labelRno.setText(_translate("view_student", "Registration Number"))
+        self.labelRno.setText(_translate("view_student", "Registration Number:"))
         self.searchRgno.setText(_translate("view_student", "GET USN"))
         self.addStudent.setText(_translate("view_student", "Add New Student?"))
-        self.deleteStudent.setToolTip(_translate("view_student", "<html><head/><body><p>Delete Student</p></body></html>"))
-        self.modifyStudent.setToolTip(_translate("view_student", "<html><head/><body><p>Modify Student</p></body></html>"))
-        self.issueComponent.setToolTip(_translate("view_student", "<html><head/><body><p>Issue Component to Student</p></body></html>"))
+        self.label.setText(_translate("view_student", "Student Details"))
+        self.deleteStudent.setWhatsThis(_translate("view_student", "<html><head/><body><p>Delete Component</p></body></html>"))
+        self.modifyStudent.setToolTip(_translate("view_student", "<html><head/><body><p>Modify Admin</p></body></html>"))
+        self.issueComponent.setToolTip(_translate("view_student", "<html><head/><body><p>Issue Component</p></body></html>"))
 
 import icons_rc
 

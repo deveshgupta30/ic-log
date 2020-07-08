@@ -27,30 +27,31 @@ class Ui_student_portal(object):
         self.label.setText("")
         self.label.setObjectName("label")
         self.signOut = QtWidgets.QPushButton(self.centralwidget)
-        self.signOut.setGeometry(QtCore.QRect(890, 10, 101, 31))
+        self.signOut.setGeometry(QtCore.QRect(855, 10, 135, 35))
         self.signOut.setStyleSheet("#signOut{\n"
 "background-color: transparent;\n"
 "border-color:transparent;\n"
 "color: white;\n"
-"font: 11pt \"Slate For OnePlus Bk\";\n"
+"font: 14pt \"Slate For OnePlus Bk\";\n"
 "}\n"
 "#signOut:hover{\n"
 "background-color: transparent;\n"
 "border-color:transparent;\n"
 "color: #73e8ff;\n"
-"    font: 11pt \"Slate For OnePlus Bk\";\n"
+"    font: 14pt \"Slate For OnePlus Bk\";\n"
 "    text-decoration: underline;\n"
 "}\n"
 "#signOut:pressed{\n"
 "background-color: transparent;\n"
 "border-color:transparent;\n"
 "color: #29b6f6;\n"
-"font: 11pt \"Slate For OnePlus Bk\";\n"
+"font: 14pt \"Slate For OnePlus Bk\";\n"
 "}\n"
 "")
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/alert_box/signout.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.signOut.setIcon(icon)
+        self.signOut.setIconSize(QtCore.QSize(25, 25))
         self.signOut.setObjectName("signOut")
         self.label_4 = QtWidgets.QLabel(self.centralwidget)
         self.label_4.setGeometry(QtCore.QRect(0, 0, 1001, 71))
@@ -185,7 +186,7 @@ class Ui_student_portal(object):
         self.line.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.line.setObjectName("line")
         self.adminProfile = QtWidgets.QPushButton(self.centralwidget)
-        self.adminProfile.setGeometry(QtCore.QRect(60, 0, 791, 51))
+        self.adminProfile.setGeometry(QtCore.QRect(60, 0, 351, 51))
         self.adminProfile.setStyleSheet("#adminProfile{\n"
 "background-color: transparent;\n"
 "border-color:transparent;\n"
@@ -210,14 +211,6 @@ class Ui_student_portal(object):
 "}\n"
 "")
         self.adminProfile.setObjectName("adminProfile")
-        self.lcdRequested = QtWidgets.QLCDNumber(self.centralwidget)
-        self.lcdRequested.setGeometry(QtCore.QRect(70, 220, 171, 101))
-        self.lcdRequested.setStyleSheet("color: blue;\n"
-"")
-        self.lcdRequested.setFrameShadow(QtWidgets.QFrame.Plain)
-        self.lcdRequested.setLineWidth(0)
-        self.lcdRequested.setDigitCount(5)
-        self.lcdRequested.setObjectName("lcdRequested")
         self.label_8 = QtWidgets.QLabel(self.centralwidget)
         self.label_8.setGeometry(QtCore.QRect(50, 330, 211, 31))
         self.label_8.setStyleSheet("font: 57 9pt \"Slate For OnePlus Medium\";\n"
@@ -228,19 +221,24 @@ class Ui_student_portal(object):
         self.label_13.setStyleSheet("font: 57 9pt \"Slate For OnePlus Medium\";\n"
 "color: #000063;")
         self.label_13.setObjectName("label_13")
-        self.lcdRequested_2 = QtWidgets.QLCDNumber(self.centralwidget)
-        self.lcdRequested_2.setGeometry(QtCore.QRect(70, 370, 171, 101))
-        self.lcdRequested_2.setStyleSheet("color: #64dd17;\n"
-"")
-        self.lcdRequested_2.setFrameShadow(QtWidgets.QFrame.Plain)
-        self.lcdRequested_2.setLineWidth(0)
-        self.lcdRequested_2.setDigitCount(5)
-        self.lcdRequested_2.setObjectName("lcdRequested_2")
-        self.lcdBorrowed = QtWidgets.QLCDNumber(self.centralwidget)
-        self.lcdBorrowed.setGeometry(QtCore.QRect(70, 520, 171, 101))
-        self.lcdBorrowed.setStyleSheet("color: red;")
-        self.lcdBorrowed.setLineWidth(0)
-        self.lcdBorrowed.setObjectName("lcdBorrowed")
+        self.setLabLabel = QtWidgets.QLabel(self.centralwidget)
+        self.setLabLabel.setGeometry(QtCore.QRect(70, 230, 171, 101))
+        self.setLabLabel.setStyleSheet("color: blue;\n"
+"font: 25 36pt \"Slate For OnePlus Thin\";")
+        self.setLabLabel.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.setLabLabel.setObjectName("setLabLabel")
+        self.setTRC = QtWidgets.QLabel(self.centralwidget)
+        self.setTRC.setGeometry(QtCore.QRect(70, 370, 171, 101))
+        self.setTRC.setStyleSheet("color: #64dd17;\n"
+"font: 25 36pt \"Slate For OnePlus Thin\";")
+        self.setTRC.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.setTRC.setObjectName("setTRC")
+        self.setTCD = QtWidgets.QLabel(self.centralwidget)
+        self.setTCD.setGeometry(QtCore.QRect(70, 520, 171, 101))
+        self.setTCD.setStyleSheet("color: red;\n"
+"font: 25 36pt \"Slate For OnePlus Thin\";")
+        self.setTCD.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.setTCD.setObjectName("setTCD")
         self.label_4.raise_()
         self.label.raise_()
         self.signOut.raise_()
@@ -255,22 +253,91 @@ class Ui_student_portal(object):
         self.dueButton.raise_()
         self.line.raise_()
         self.adminProfile.raise_()
-        self.lcdRequested.raise_()
         self.label_8.raise_()
         self.label_13.raise_()
-        self.lcdRequested_2.raise_()
-        self.lcdBorrowed.raise_()
+        self.setLabLabel.raise_()
+        self.setTRC.raise_()
+        self.setTCD.raise_()
+        self.aboutButton = QtWidgets.QPushButton(self.centralwidget)
+        self.aboutButton.setGeometry(QtCore.QRect(460, 0, 81, 51))
+        self.aboutButton.setStyleSheet("#aboutButton{\n"
+"background-color: transparent;\n"
+"border-color:transparent;\n"
+"color: white;\n"
+"font: 17pt \"Slate For OnePlus Bk\";\n"
+"text-align: left;\n"
+"}\n"
+"#aboutButton:hover{\n"
+"background-color: transparent;\n"
+"border-color:transparent;\n"
+"color: #73e8ff;\n"
+"    font: 17pt \"Slate For OnePlus Bk\";\n"
+"text-align: left;\n"
+"\n"
+"}\n"
+"#aboutButton:pressed{\n"
+"background-color: transparent;\n"
+"border-color:transparent;\n"
+"color: #29b6f6;\n"
+"font: 17pt \"Slate For OnePlus Bk\";\n"
+"text-align: left;\n"
+"}\n"
+"")
+        self.aboutButton.setObjectName("aboutButton")
         student_portal.setCentralWidget(self.centralwidget)
+        self.actionRequest_Components = QtWidgets.QAction(student_portal)
+        self.actionRequest_Components.setObjectName("actionRequest_Components")
+        self.actionView_Profile = QtWidgets.QAction(student_portal)
+        self.actionView_Profile.setObjectName("actionView_Profile")
+        self.actionChange_Password = QtWidgets.QAction(student_portal)
+        self.actionChange_Password.setObjectName("actionChange_Password")
+        self.actionComponent_History = QtWidgets.QAction(student_portal)
+        self.actionComponent_History.setObjectName("actionComponent_History")
+        self.actionAbout = QtWidgets.QAction(student_portal)
+        self.actionAbout.setObjectName("actionAbout")
+        self.actionAdmin = QtWidgets.QAction(student_portal)
+        self.actionAdmin.setObjectName("actionAdmin")
+        self.actionComponent = QtWidgets.QAction(student_portal)
+        self.actionComponent.setObjectName("actionComponent")
+        self.actionStudent = QtWidgets.QAction(student_portal)
+        self.actionStudent.setObjectName("actionStudent")
+        self.actionAdmin_2 = QtWidgets.QAction(student_portal)
+        self.actionAdmin_2.setObjectName("actionAdmin_2")
+        self.actionComponent_2 = QtWidgets.QAction(student_portal)
+        self.actionComponent_2.setObjectName("actionComponent_2")
+        self.actionStudent_2 = QtWidgets.QAction(student_portal)
+        self.actionStudent_2.setObjectName("actionStudent_2")
+        self.actionAdmin_3 = QtWidgets.QAction(student_portal)
+        self.actionAdmin_3.setObjectName("actionAdmin_3")
+        self.actionComponent_3 = QtWidgets.QAction(student_portal)
+        self.actionComponent_3.setObjectName("actionComponent_3")
+        self.actionStudent_3 = QtWidgets.QAction(student_portal)
+        self.actionStudent_3.setObjectName("actionStudent_3")
+        self.actionComponent_Dues = QtWidgets.QAction(student_portal)
+        self.actionComponent_Dues.setObjectName("actionComponent_Dues")
+        self.actionSign_Out = QtWidgets.QAction(student_portal)
+        self.actionSign_Out.setObjectName("actionSign_Out")
+        self.actionExit = QtWidgets.QAction(student_portal)
+        self.actionExit.setObjectName("actionExit")
         self.adminButton.clicked.connect(self.openViewAdmin)
         self.adminProfile.clicked.connect(self.openViewProfile)
         self.componentButton.clicked.connect(self.openViewComponent)
         self.signOut.clicked.connect(lambda: self.openIndex(student_portal))
         self.studentButton.clicked.connect(self.openViewStudent)
         self.approveButton.clicked.connect(self.openApproveComponent)
+        self.aboutButton.clicked.connect(self.openAbout)
         self.dueButton.clicked.connect(self.openComponentDues)
-        self.retranslateUi(student_portal)
+        self.aboutButton.raise_()
 
+        self.retranslateUi(student_portal)
         QtCore.QMetaObject.connectSlotsByName(student_portal)
+
+    def openAbout(self):
+        self.window12=QtWidgets.QWidget()
+        self.ui12=about.Ui_About()
+        self.ui12.setupUi(self.window12)
+        self.window12.show()
+        
     def openIndex(self, student_portal):
         
         from admin_login import Ui_Form
@@ -281,9 +348,9 @@ class Ui_student_portal(object):
         student_portal.close()
         
     def setDashDetails(self, lab, borrowed, requested):
-        self.lcdRequested.display(lab)
-        self.lcdRequested_2.display(requested)
-        self.lcdBorrowed.display(borrowed)
+        self.setLabLabel.setText(str(lab))
+        self.setTRC.setText(str(requested))
+        self.setTCD.setText(str(borrowed))
         
     def openComponentDues(self):
         import db
@@ -350,7 +417,7 @@ class Ui_student_portal(object):
         
     def retranslateUi(self, student_portal):
         _translate = QtCore.QCoreApplication.translate
-        student_portal.setWindowTitle(_translate("stude2nt_portal", "Admin Portal"))
+        student_portal.setWindowTitle(_translate("student_portal", "Admin Portal - ICLog"))
         self.signOut.setText(_translate("student_portal", "Sign Out"))
         self.adminButton.setToolTip(_translate("student_portal", "<html><head/><body><p>Admin</p></body></html>"))
         self.studentButton.setToolTip(_translate("student_portal", "<html><head/><body><p>Student</p></body></html>"))
@@ -362,8 +429,31 @@ class Ui_student_portal(object):
         self.adminProfile.setText(_translate("student_portal", "Admin"))
         self.label_8.setText(_translate("student_portal", "Total Requested Components"))
         self.label_13.setText(_translate("student_portal", "Total Component Dues"))
+        self.setLabLabel.setText(_translate("student_portal", "0"))
+        self.setTRC.setText(_translate("student_portal", "0"))
+        self.setTCD.setText(_translate("student_portal", "0"))
+        self.actionRequest_Components.setText(_translate("student_portal", "Approve Components"))
+        self.actionView_Profile.setText(_translate("student_portal", "View Profile"))
+        self.actionView_Profile.setShortcut(_translate("student_portal", "Ctrl+P"))
+        self.actionChange_Password.setText(_translate("student_portal", "Change Password"))
+        self.actionComponent_History.setText(_translate("student_portal", "Component History"))
+        self.actionAbout.setText(_translate("student_portal", "About"))
+        self.aboutButton.setText(_translate("student_portal", "ICLog"))
+        self.actionAbout.setShortcut(_translate("student_portal", "F1"))
+        self.actionAdmin.setText(_translate("student_portal", "Admin"))
+        self.actionComponent.setText(_translate("student_portal", "Component"))
+        self.actionStudent.setText(_translate("student_portal", "Student"))
+        self.actionAdmin_2.setText(_translate("student_portal", "Admin"))
+        self.actionComponent_2.setText(_translate("student_portal", "Component"))
+        self.actionStudent_2.setText(_translate("student_portal", "Student"))
+        self.actionAdmin_3.setText(_translate("student_portal", "Admin"))
+        self.actionComponent_3.setText(_translate("student_portal", "Component"))
+        self.actionStudent_3.setText(_translate("student_portal", "Student"))
+        self.actionComponent_Dues.setText(_translate("student_portal", "Component Dues"))
+        self.actionSign_Out.setText(_translate("student_portal", "Sign Out"))
+        self.actionExit.setText(_translate("student_portal", "Exit"))
 
-import icons_rc
+import icons_rc, about
 
 if __name__ == "__main__":
     import sys

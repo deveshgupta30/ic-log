@@ -1,8 +1,47 @@
 <RCC>
   <qresource prefix="admin">
+    <file>cart.png</file>
+    <file>cart2.png</file>
     <file>admin1.png</file>
     <file>admin.png</file>
     <file>admin_metro.png</file>
+  </qresource>
+  <qresource prefix="others">
+    <file>lel_delete2.png</file>
+    <file>lel_delete.png</file>
+    <file>modify.png</file>
+    <file>modify2.png</file>
+    <file>Components.png</file>
+    <file>lel_user.png</file>
+    <file>lel_user_2.png</file>
+    <file>blue_info.png</file>
+    <file>white_info.png</file>
+    <file>APP ICON_EDIT.png</file>
+    <file>approve comp3.png</file>
+    <file>due3.png</file>
+    <file>approve comp2.png</file>
+    <file>due2.png</file>
+    <file>due.png</file>
+    <file>approve comp.png</file>
+    <file>Delete-Anti-Revoke.png</file>
+    <file>edit_user-512.png</file>
+    <file>cart-add-icon.png</file>
+    <file>Components2.png</file>
+  </qresource>
+  <qresource prefix="Window">
+    <file>Circle Close - 03.png</file>
+    <file>Minus_1.png</file>
+    <file>Minus_2.png</file>
+    <file>Minus_3.png</file>
+    <file>Circle Close - 01.png</file>
+    <file>Circle Close - 02.png</file>
+  </qresource>
+  <qresource prefix="ICLog icons">
+    <file>feedback.png</file>
+    <file>ICLog.ico</file>
+    <file>ICLog_png.png</file>
+    <file>ICLog_Uninstall.ico</file>
+    <file>ICLog_Uninstall_png.png</file>
   </qresource>
   <qresource prefix="alert_box">
     <file>admin3.png</file>
@@ -21,7 +60,9 @@
     <file>STUDENT BUTTON.png</file>
   </qresource>
   <qresource prefix="Wallpaper">
+    <file>about.png</file>
     <file>l4.png</file>
+    <file>l1w.png</file>
     <file>l1.png</file>
     <file>l2.png</file>
     <file>l3.png</file>

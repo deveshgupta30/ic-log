@@ -175,7 +175,7 @@ class Ui_admin_profile(object):
         self.label.setScaledContents(True)
         self.label.setObjectName("label")
         self.changePassword = QtWidgets.QPushButton(admin_profile)
-        self.changePassword.setGeometry(QtCore.QRect(10, 430, 121, 31))
+        self.changePassword.setGeometry(QtCore.QRect(10, 430, 185, 41))
         self.changePassword.setStyleSheet("#changePassword{\n"
 "background-color:white;\n"
 "color:#0277BD;\n"
@@ -240,7 +240,7 @@ class Ui_admin_profile(object):
         self.labelLab.setText(_translate("admin_profile", "Lab:"))
         self.showLab.setText(_translate("admin_profile", "Lab"))
         self.labelName.setText(_translate("admin_profile", "My Profile"))
-        self.changePassword.setText(_translate("admin_profile", "Change Password"))
+        self.changePassword.setText(_translate("admin_profile", "CHANGE PASSWORD"))
 
 import icons_rc
 

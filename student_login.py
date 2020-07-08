@@ -242,13 +242,16 @@ class Ui_Form(object):
             QtWidgets.QMessageBox.about(Form, "Error!", "Please connect to the Internet first!")
         else:
             import db
-            a=db.studentLogin(self.username.text(), self.password.text())
-            if a==True: 
-                self.openStudentPortal(Form)
-            elif a==False:
-                QtWidgets.QMessageBox.about(Form, "Inorrect", "Your password is incorrect")
-            else:
-                QtWidgets.QMessageBox.about(Form, "Error!", a)
+            try:
+                a=db.studentLogin(self.username.text(), self.password.text())
+                if a==True: 
+                    self.openStudentPortal(Form)
+                elif a==False:
+                    QtWidgets.QMessageBox.about(Form, "Inorrect", "Your password is incorrect")
+                else:
+                    QtWidgets.QMessageBox.about(Form, "Error!", a)
+            except:
+                QtWidgets.QMessageBox.about(Form, "Error!", "We are facing some server side technical issues. Please try again later.")
                 
     def openFPass(self):
         self.window=QtWidgets.QWidget()

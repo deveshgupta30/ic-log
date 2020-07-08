@@ -11,15 +11,18 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_add_admin(object):
     def setupUi(self, add_admin):
         add_admin.setObjectName("add_admin")
-        add_admin.resize(650, 550)
-        add_admin.setMinimumSize(QtCore.QSize(650, 550))
-        add_admin.setMaximumSize(QtCore.QSize(650, 550))
+        add_admin.resize(651, 601)
+        add_admin.setMinimumSize(QtCore.QSize(651, 601))
+        add_admin.setMaximumSize(QtCore.QSize(651, 601))
+        add_admin.setStyleSheet("")
+        self.confirmButton = QtWidgets.QPushButton(add_admin)
+        self.confirmButton.setEnabled(True)
+        self.confirmButton.setGeometry(QtCore.QRect(440, 540, 101, 41))
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/admin/admin.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         add_admin.setWindowIcon(icon)
-        self.confirmButton = QtWidgets.QPushButton(add_admin)
-        self.confirmButton.setEnabled(True)
-        self.confirmButton.setGeometry(QtCore.QRect(450, 490, 101, 41))
+        add_admin.setWindowFlags(QtCore.Qt.FramelessWindowHint)
+        add_admin.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         font = QtGui.QFont()
         font.setFamily("Slate For OnePlus Medium")
         font.setPointSize(1)
@@ -46,7 +49,7 @@ class Ui_add_admin(object):
 "}")
         self.confirmButton.setObjectName("confirmButton")
         self.cancelButton = QtWidgets.QPushButton(add_admin)
-        self.cancelButton.setGeometry(QtCore.QRect(550, 490, 101, 41))
+        self.cancelButton.setGeometry(QtCore.QRect(540, 540, 101, 41))
         font = QtGui.QFont()
         font.setFamily("Slate For OnePlus Medium")
         font.setPointSize(1)
@@ -79,15 +82,47 @@ class Ui_add_admin(object):
 "background-color:#1A237E;\n"
 "}")
         self.cancelButton.setObjectName("cancelButton")
+        self.MAINLABEL = QtWidgets.QLabel(add_admin)
+        self.MAINLABEL.setGeometry(QtCore.QRect(0, 0, 651, 141))
+        font = QtGui.QFont()
+        font.setFamily("Slate For OnePlus Medium")
+        font.setPointSize(22)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(7)
+        self.MAINLABEL.setFont(font)
+        self.MAINLABEL.setStyleSheet("font: 57 22pt \"Slate For OnePlus Medium\";\n"
+"color: #ffffff;\n"
+"background-color: qlineargradient(spread:pad, x1:0.492, y1:0, x2:0.507, y2:1, stop:0.00497512 rgba(0, 52, 93, 255), stop:0.228856 rgba(1, 87, 155, 255), stop:1 rgba(1, 87, 155, 255));\n"
+"border-radius: 15px;")
+        self.MAINLABEL.setText("")
+        self.MAINLABEL.setAlignment(QtCore.Qt.AlignCenter)
+        self.MAINLABEL.setObjectName("MAINLABEL")
+        self.label_2 = QtWidgets.QLabel(add_admin)
+        self.label_2.setGeometry(QtCore.QRect(0, 110, 651, 491))
+        font = QtGui.QFont()
+        font.setFamily("Slate For OnePlus")
+        self.label_2.setFont(font)
+        self.label_2.setStyleSheet("#label_2{\n"
+"border-width: 2px;\n"
+"border-top-color: transparent;\n"
+"border-left-color: #01579B;\n"
+"border-right-color: #01579B;\n"
+"border-bottom-color: #01579B;\n"
+"border-style: inset;\n"
+"background-color:#ffffff;\n"
+"border-radius: 15px;\n"
+"\n"
+"}")
+        self.label_2.setText("")
+        self.label_2.setObjectName("label_2")
         self.formLayoutWidget = QtWidgets.QWidget(add_admin)
-        self.formLayoutWidget.setGeometry(QtCore.QRect(10, 110, 631, 344))
+        self.formLayoutWidget.setGeometry(QtCore.QRect(20, 140, 611, 371))
         self.formLayoutWidget.setObjectName("formLayoutWidget")
         self.formLayout = QtWidgets.QFormLayout(self.formLayoutWidget)
         self.formLayout.setSizeConstraint(QtWidgets.QLayout.SetDefaultConstraint)
         self.formLayout.setContentsMargins(0, 0, 0, 0)
         self.formLayout.setObjectName("formLayout")
-        spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.formLayout.setItem(0, QtWidgets.QFormLayout.FieldRole, spacerItem)
         self.labelName = QtWidgets.QLabel(self.formLayoutWidget)
         self.labelName.setMinimumSize(QtCore.QSize(0, 40))
         font = QtGui.QFont()
@@ -99,7 +134,7 @@ class Ui_add_admin(object):
         self.labelName.setFont(font)
         self.labelName.setStyleSheet("font: 57 12pt \"Slate For OnePlus BK\";")
         self.labelName.setObjectName("labelName")
-        self.formLayout.setWidget(1, QtWidgets.QFormLayout.LabelRole, self.labelName)
+        self.formLayout.setWidget(0, QtWidgets.QFormLayout.LabelRole, self.labelName)
         self.enterName = QtWidgets.QLineEdit(self.formLayoutWidget)
         self.enterName.setMinimumSize(QtCore.QSize(430, 40))
         font = QtGui.QFont()
@@ -114,7 +149,7 @@ class Ui_add_admin(object):
 "border-color: #64B5F6;\n"
 "border-style: outset;\n"
 "border-width: 1px;\n"
-"border-radius: 15px;\n"
+"border-radius: 8px;\n"
 "font: 57 10pt \"Slate For OnePlus\";\n"
 "padding: 6px;\n"
 "padding-left: 15px;\n"
@@ -128,9 +163,9 @@ class Ui_add_admin(object):
 "}")
         self.enterName.setClearButtonEnabled(True)
         self.enterName.setObjectName("enterName")
-        self.formLayout.setWidget(1, QtWidgets.QFormLayout.FieldRole, self.enterName)
-        spacerItem1 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.formLayout.setItem(2, QtWidgets.QFormLayout.LabelRole, spacerItem1)
+        self.formLayout.setWidget(0, QtWidgets.QFormLayout.FieldRole, self.enterName)
+        spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.formLayout.setItem(1, QtWidgets.QFormLayout.LabelRole, spacerItem)
         self.labelEid = QtWidgets.QLabel(self.formLayoutWidget)
         self.labelEid.setMinimumSize(QtCore.QSize(0, 40))
         font = QtGui.QFont()
@@ -142,7 +177,7 @@ class Ui_add_admin(object):
         self.labelEid.setFont(font)
         self.labelEid.setStyleSheet("font: 57 12pt \"Slate For OnePlus BK\";")
         self.labelEid.setObjectName("labelEid")
-        self.formLayout.setWidget(3, QtWidgets.QFormLayout.LabelRole, self.labelEid)
+        self.formLayout.setWidget(2, QtWidgets.QFormLayout.LabelRole, self.labelEid)
         self.enterEid = QtWidgets.QLineEdit(self.formLayoutWidget)
         self.enterEid.setMinimumSize(QtCore.QSize(430, 40))
         font = QtGui.QFont()
@@ -157,7 +192,7 @@ class Ui_add_admin(object):
 "border-color: #64B5F6;\n"
 "border-style: outset;\n"
 "border-width: 1px;\n"
-"border-radius: 15px;\n"
+"border-radius: 8px;\n"
 "font: 57 10pt \"Slate For OnePlus\";\n"
 "padding: 6px;\n"
 "padding-left: 15px;\n"
@@ -171,9 +206,9 @@ class Ui_add_admin(object):
 "}")
         self.enterEid.setClearButtonEnabled(True)
         self.enterEid.setObjectName("enterEid")
-        self.formLayout.setWidget(3, QtWidgets.QFormLayout.FieldRole, self.enterEid)
-        spacerItem2 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.formLayout.setItem(4, QtWidgets.QFormLayout.LabelRole, spacerItem2)
+        self.formLayout.setWidget(2, QtWidgets.QFormLayout.FieldRole, self.enterEid)
+        spacerItem1 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.formLayout.setItem(3, QtWidgets.QFormLayout.LabelRole, spacerItem1)
         self.labelEmail = QtWidgets.QLabel(self.formLayoutWidget)
         self.labelEmail.setMinimumSize(QtCore.QSize(0, 40))
         font = QtGui.QFont()
@@ -185,7 +220,7 @@ class Ui_add_admin(object):
         self.labelEmail.setFont(font)
         self.labelEmail.setStyleSheet("font: 57 12pt \"Slate For OnePlus BK\";")
         self.labelEmail.setObjectName("labelEmail")
-        self.formLayout.setWidget(5, QtWidgets.QFormLayout.LabelRole, self.labelEmail)
+        self.formLayout.setWidget(4, QtWidgets.QFormLayout.LabelRole, self.labelEmail)
         self.enterEmail = QtWidgets.QLineEdit(self.formLayoutWidget)
         self.enterEmail.setMinimumSize(QtCore.QSize(430, 40))
         font = QtGui.QFont()
@@ -200,7 +235,7 @@ class Ui_add_admin(object):
 "border-color: #64B5F6;\n"
 "border-style: outset;\n"
 "border-width: 1px;\n"
-"border-radius: 15px;\n"
+"border-radius: 8px;\n"
 "font: 57 10pt \"Slate For OnePlus\";\n"
 "padding: 6px;\n"
 "padding-left: 15px;\n"
@@ -215,9 +250,9 @@ class Ui_add_admin(object):
         self.enterEmail.setInputMethodHints(QtCore.Qt.ImhNone)
         self.enterEmail.setClearButtonEnabled(True)
         self.enterEmail.setObjectName("enterEmail")
-        self.formLayout.setWidget(5, QtWidgets.QFormLayout.FieldRole, self.enterEmail)
-        spacerItem3 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.formLayout.setItem(6, QtWidgets.QFormLayout.LabelRole, spacerItem3)
+        self.formLayout.setWidget(4, QtWidgets.QFormLayout.FieldRole, self.enterEmail)
+        spacerItem2 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.formLayout.setItem(5, QtWidgets.QFormLayout.LabelRole, spacerItem2)
         self.labelContact = QtWidgets.QLabel(self.formLayoutWidget)
         self.labelContact.setMinimumSize(QtCore.QSize(0, 40))
         font = QtGui.QFont()
@@ -229,7 +264,7 @@ class Ui_add_admin(object):
         self.labelContact.setFont(font)
         self.labelContact.setStyleSheet("font: 57 12pt \"Slate For OnePlus BK\";")
         self.labelContact.setObjectName("labelContact")
-        self.formLayout.setWidget(7, QtWidgets.QFormLayout.LabelRole, self.labelContact)
+        self.formLayout.setWidget(6, QtWidgets.QFormLayout.LabelRole, self.labelContact)
         self.enterContact = QtWidgets.QLineEdit(self.formLayoutWidget)
         self.enterContact.setMinimumSize(QtCore.QSize(430, 40))
         font = QtGui.QFont()
@@ -244,7 +279,7 @@ class Ui_add_admin(object):
 "border-color: #64B5F6;\n"
 "border-style: outset;\n"
 "border-width: 1px;\n"
-"border-radius: 15px;\n"
+"border-radius: 8px;\n"
 "font: 57 10pt \"Slate For OnePlus\";\n"
 "padding: 6px;\n"
 "padding-left: 15px;\n"
@@ -259,8 +294,21 @@ class Ui_add_admin(object):
         self.enterContact.setInputMethodHints(QtCore.Qt.ImhNone)
         self.enterContact.setClearButtonEnabled(True)
         self.enterContact.setObjectName("enterContact")
-        self.formLayout.setWidget(7, QtWidgets.QFormLayout.FieldRole, self.enterContact)
-        
+        self.formLayout.setWidget(6, QtWidgets.QFormLayout.FieldRole, self.enterContact)
+        spacerItem3 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.formLayout.setItem(7, QtWidgets.QFormLayout.LabelRole, spacerItem3)
+        self.labelLab = QtWidgets.QLabel(self.formLayoutWidget)
+        self.labelLab.setMinimumSize(QtCore.QSize(0, 40))
+        font = QtGui.QFont()
+        font.setFamily("Slate For OnePlus BK")
+        font.setPointSize(12)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(7)
+        self.labelLab.setFont(font)
+        self.labelLab.setStyleSheet("font: 57 12pt \"Slate For OnePlus BK\";")
+        self.labelLab.setObjectName("labelLab")
+        self.formLayout.setWidget(8, QtWidgets.QFormLayout.LabelRole, self.labelLab)
         self.enterLab = QtWidgets.QLineEdit(self.formLayoutWidget)
         self.enterLab.setMinimumSize(QtCore.QSize(0, 40))
         self.enterLab.setStyleSheet("#enterLab{\n"
@@ -268,7 +316,7 @@ class Ui_add_admin(object):
 "border-color: #64B5F6;\n"
 "border-style: outset;\n"
 "border-width: 1px;\n"
-"border-radius: 15px;\n"
+"border-radius: 8px;\n"
 "font: 57 10pt \"Slate For OnePlus\";\n"
 "padding: 6px;\n"
 "padding-left: 15px;\n"
@@ -282,28 +330,21 @@ class Ui_add_admin(object):
 "}")
         self.enterLab.setClearButtonEnabled(True)
         self.enterLab.setObjectName("enterLab")
-        self.formLayout.setWidget(9, QtWidgets.QFormLayout.FieldRole, self.enterLab)
+        self.formLayout.setWidget(8, QtWidgets.QFormLayout.FieldRole, self.enterLab)
+        spacerItem4 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.formLayout.setItem(9, QtWidgets.QFormLayout.LabelRole, spacerItem4)
+        self.labelPass = QtWidgets.QLabel(self.formLayoutWidget)
+        self.labelPass.setMinimumSize(QtCore.QSize(0, 40))
         font = QtGui.QFont()
         font.setFamily("Slate For OnePlus BK")
         font.setPointSize(12)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(7)
-        self.labelLab = QtWidgets.QLabel(self.formLayoutWidget)
-        self.labelLab.setMinimumSize(QtCore.QSize(0, 40))
-        self.labelLab.setFont(font)
-        self.labelLab.setStyleSheet("font: 57 12pt \"Slate For OnePlus BK\";")
-        self.labelLab.setObjectName("labelLab")
-        self.labelPass = QtWidgets.QLabel(self.formLayoutWidget)
-        self.labelPass.setMinimumSize(QtCore.QSize(0, 40))
         self.labelPass.setFont(font)
         self.labelPass.setStyleSheet("font: 57 12pt \"Slate For OnePlus BK\";")
         self.labelPass.setObjectName("labelPass")
-        self.formLayout.setWidget(11, QtWidgets.QFormLayout.LabelRole, self.labelPass)
-        spacerItem4 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.formLayout.setItem(8, QtWidgets.QFormLayout.LabelRole, spacerItem4)
-        spacerItem5 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.formLayout.setItem(10, QtWidgets.QFormLayout.LabelRole, spacerItem5)
+        self.formLayout.setWidget(10, QtWidgets.QFormLayout.LabelRole, self.labelPass)
         self.enterPass = QtWidgets.QLineEdit(self.formLayoutWidget)
         self.enterPass.setMinimumSize(QtCore.QSize(0, 40))
         self.enterPass.setStyleSheet("#enterPass{\n"
@@ -311,7 +352,7 @@ class Ui_add_admin(object):
 "border-color: #64B5F6;\n"
 "border-style: outset;\n"
 "border-width: 1px;\n"
-"border-radius: 15px;\n"
+"border-radius: 8px;\n"
 "font: 57 10pt \"Slate For OnePlus\";\n"
 "padding: 6px;\n"
 "padding-left: 15px;\n"
@@ -325,58 +366,77 @@ class Ui_add_admin(object):
 "}")
         self.enterPass.setClearButtonEnabled(True)
         self.enterPass.setObjectName("enterPass")
-        self.formLayout.setWidget(11, QtWidgets.QFormLayout.FieldRole, self.enterPass)
-        font = QtGui.QFont()
-        font.setFamily("Slate For OnePlus BK")
-        font.setPointSize(12)
-        font.setBold(False)
-        font.setItalic(False)
-        font.setWeight(7)
-        self.formLayout.setWidget(9, QtWidgets.QFormLayout.LabelRole, self.labelLab)
-        self.MAINLABEL = QtWidgets.QLabel(add_admin)
-        self.MAINLABEL.setGeometry(QtCore.QRect(0, 0, 651, 81))
-        font = QtGui.QFont()
-        font.setFamily("Slate For OnePlus Medium")
-        font.setPointSize(22)
-        font.setBold(False)
-        font.setItalic(False)
-        font.setWeight(7)
-        self.MAINLABEL.setFont(font)
-        self.MAINLABEL.setStyleSheet("font: 57 22pt \"Slate For OnePlus Medium\";\n"
+        self.formLayout.setWidget(10, QtWidgets.QFormLayout.FieldRole, self.enterPass)
+        self.label = QtWidgets.QLabel(add_admin)
+        self.label.setGeometry(QtCore.QRect(0, 30, 651, 81))
+        self.label.setStyleSheet("font: 57 22pt \"Slate For OnePlus Medium\";\n"
 "color: #ffffff;\n"
-"background-color:#01579B;")
-        self.MAINLABEL.setAlignment(QtCore.Qt.AlignCenter)
-        self.MAINLABEL.setObjectName("MAINLABEL")
-        self.label_2 = QtWidgets.QLabel(add_admin)
-        self.label_2.setGeometry(QtCore.QRect(-30, 80, 731, 551))
-        font = QtGui.QFont()
-        font.setFamily("Slate For OnePlus")
-        self.label_2.setFont(font)
-        self.label_2.setStyleSheet("background-color:#ffffff")
-        self.label_2.setText("")
-        self.label_2.setObjectName("label_2")
+"background-color: transparent;")
+        self.label.setAlignment(QtCore.Qt.AlignCenter)
+        self.label.setObjectName("label")
+        self.exitWindow = QtWidgets.QPushButton(add_admin)
+        self.exitWindow.setGeometry(QtCore.QRect(620, 10, 21, 21))
+        self.exitWindow.setStyleSheet("#exitWindow{\n"
+"border-image: url(:/Window/Circle Close - 01.png);\n"
+"background-color: transparent;\n"
+"}\n"
+"#exitWindow:hover{\n"
+"border-image: url(:/Window/Circle Close - 02.png);\n"
+"background-color: transparent;\n"
+"}\n"
+"#exitWindow:pressed{\n"
+"border-image: url(:/Window/Circle Close - 03.png);\n"
+"background-color: transparent;\n"
+"}")
+        self.exitWindow.setText("")
+        self.exitWindow.setObjectName("exitWindow")
+        self.minWindow = QtWidgets.QPushButton(add_admin)
+        self.minWindow.setGeometry(QtCore.QRect(590, 10, 21, 21))
+        self.minWindow.setStyleSheet("#minWindow{\n"
+"border-image: url(:/Window/Minus_1.png);\n"
+"background-color: transparent;\n"
+"}\n"
+"#minWindow:hover{\n"
+"border-image: url(:/Window/Minus_2.png);\n"
+"background-color: transparent;\n"
+"}\n"
+"#minWindow:pressed{\n"
+"border-image: url(:/Window/Minus_3.png);\n"
+"background-color: transparent;\n"
+"}")
+        self.minWindow.setText("")
+        self.minWindow.setObjectName("minWindow")
+        self.MAINLABEL.raise_()
         self.label_2.raise_()
         self.cancelButton.raise_()
-        self.formLayoutWidget.raise_()
-        self.MAINLABEL.raise_()
         self.confirmButton.raise_()
+        self.formLayoutWidget.raise_()
+        self.label.raise_()
+        self.exitWindow.raise_()
+        self.minWindow.raise_()
         self.cancelButton.clicked.connect(add_admin.close)
         self.confirmButton.clicked.connect(lambda: self.addAdmin(add_admin))
         self.enterPass.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.exitWindow.clicked.connect(add_admin.close)
+        self.minWindow.clicked.connect(add_admin.showMinimized)
+
         self.retranslateUi(add_admin)
         QtCore.QMetaObject.connectSlotsByName(add_admin)
-        
+
     def addAdmin(self, add_admin):
         import db
-        if(self.enterContact.text() == '' or self.enterEid.text()=='' or self.enterName.text()=='' or self.enterEmail.text() == '' or self.enterPass.text()=='' or self.enterLab.text()==''):
-            QtWidgets.QMessageBox.about(add_admin, "Invalid Entry!", "Please Fill all the details!")
-        elif('@' not in self.enterEmail.text()):
-            QtWidgets.QMessageBox.about(add_admin, "Invalid Entry!", "Please Enter a valid E-Mail ID!")
-        elif(len(self.enterContact.text())!=10 or not (self.enterContact.text().isdigit())):
-            QtWidgets.QMessageBox.about(add_admin, "Invalid Entry!", "Please Enter a valid Phone Number!")
-        else:
-            db.addAdmin([self.enterName.text(), self.enterEid.text(), self.enterEmail.text(), self.enterContact.text(), self.enterLab.text(), self.enterPass.text()])
-            QtWidgets.QMessageBox.about(add_admin, "Successfully Added!", self.enterName.text()+ " has been successfully added as admin!")
+        try:
+            if(self.enterContact.text() == '' or self.enterEid.text()=='' or self.enterName.text()=='' or self.enterEmail.text() == '' or self.enterPass.text()=='' or self.enterLab.text()==''):
+                QtWidgets.QMessageBox.about(add_admin, "Invalid Entry!", "Please Fill all the details!")
+            elif('@' not in self.enterEmail.text()):
+                QtWidgets.QMessageBox.about(add_admin, "Invalid Entry!", "Please Enter a valid E-Mail ID!")
+            elif(len(self.enterContact.text())!=10 or not (self.enterContact.text().isdigit())):
+                QtWidgets.QMessageBox.about(add_admin, "Invalid Entry!", "Please Enter a valid Phone Number!")
+            else:
+                db.addAdmin([self.enterName.text(), self.enterEid.text(), self.enterEmail.text(), self.enterContact.text(), self.enterLab.text(), self.enterPass.text()])
+                QtWidgets.QMessageBox.about(add_admin, "Successfully Added!", self.enterName.text()+ " has been successfully added as admin!")
+        except:
+            QtWidgets.QMessageBox.about(add_admin, "Error!", "Please check the Employee ID! The ID / Admin already exists. Please search for the admin in View Admin page and modify the details there.")
 
     def retranslateUi(self, add_admin):
         _translate = QtCore.QCoreApplication.translate
@@ -384,6 +444,7 @@ class Ui_add_admin(object):
         self.confirmButton.setText(_translate("add_admin", "+   ADD"))
         self.confirmButton.setShortcut(_translate("add_admin", "Return"))
         self.cancelButton.setText(_translate("add_admin", "CANCEL"))
+        self.exitWindow.setShortcut(_translate("add_admin", "Esc"))
         self.labelName.setText(_translate("add_admin", "Name"))
         self.enterName.setPlaceholderText(_translate("add_admin", "Full Name"))
         self.labelEid.setText(_translate("add_admin", "Employee ID"))
@@ -392,11 +453,12 @@ class Ui_add_admin(object):
         self.enterEmail.setPlaceholderText(_translate("add_admin", "E-Mail ID"))
         self.labelContact.setText(_translate("add_admin", "Contact Number"))
         self.enterContact.setPlaceholderText(_translate("add_admin", "Contact Number"))
-        self.enterLab.setPlaceholderText(_translate("add_admin", "Laboratory Room No. the Admin belongs to"))
         self.labelLab.setText(_translate("add_admin", "Lab No."))
+        self.enterLab.setPlaceholderText(_translate("add_admin", "Laboratory Room No. the Admin belongs to"))
         self.labelPass.setText(_translate("add_admin", "Login Password"))
         self.enterPass.setPlaceholderText(_translate("add_admin", "Enter New Password"))
-        self.MAINLABEL.setText(_translate("add_admin", "Add Admin"))
+        self.label.setText(_translate("add_admin", "Add Admin"))
+
 import icons_rc
 
 if __name__ == "__main__":

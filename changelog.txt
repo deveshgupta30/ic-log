@@ -1,11 +1,66 @@
-Disabled Confirm button on Add Student, Comp, Admin by default
-Added current stock in Modify Component window
-Made employeeID as PK for admin modify(reason ask)
-Added delete windows
-Changed Admin amd Student Login Background
--Added blur
-Added About Window
-Added DELETE WARNING Window
-Added Get IDS via Name Windows
-Added Change Password Window
-Added transperancy to Admin and Student Icons
+ICLog
+
+Changelog - v3.0.0
+Dated: 19-12-2018 (DD-MM-YYYY)
+
+[GENERAL]
+- Fixed bug where application crashes when trying to add duplicate admin,   student or component.
+- Fixed bug where the portal page won't refresh the values and crash.
+- Several major bug fixes.
+
+[MODIFIED]
+- Completely new layout for every window.
+- Major UI changes.
+- Added in-app close and minimize buttons.
+
+[REMOVED]
+- Title Bar from main UIs.
+
+Changelog - v2.1.8
+Dated: 11-12-2018 (DD-MM-YYYY)
+
+[GENERAL]
+- Fixed a bug where application crashes when there 
+  are server issues.
+
+[MODIFIED]
+- View Layouts
+- About Page
+- Changed Database Server
+
+---------------------------------------------------------------
+
+Changelog - v2.1.7
+Dated: 10-12-2018 (DD-MM-YYYY)
+
+[GENERAL]
+- General bug fixes
+- Registry modifications
+- Basic Improvements
+
+[MODIFIED]
+- Now the windows have a ICLog postfix after window names
+
+[ADDED]
+- Added ICLog banner on top of portals
+- Now one can open about from portal itself
+
+---------------------------------------------------------------
+
+Changelog - v2.1.6
+Dated: 10-12-2018 (DD-MM-YYYY)
+
+[GENERAL]
+- Compressed the size of installer
+- General bug fixes
+- Registry modifications
+
+[MODIFIED]
+- Changed About Screen
+- Rearranged icons for view screens
+- Changed student icon to edit icon for view components
+
+[ADDED]
+- Feedback
+- New Layouts
+- Source icon for exe file

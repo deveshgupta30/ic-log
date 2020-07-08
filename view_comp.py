@@ -12,14 +12,14 @@ class Ui_view_comp(object):
     def setupUi(self, view_comp):
         view_comp.setObjectName("view_comp")
         view_comp.resize(650, 550)
-        view_comp.setMinimumSize(QtCore.QSize(650, 550))
-        view_comp.setMaximumSize(QtCore.QSize(650, 550))
-        self.cancelButton = QtWidgets.QPushButton(view_comp)
-        self.cancelButton.setGeometry(QtCore.QRect(570, 480, 75, 40))
-        font = QtGui.QFont()
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/admin/admin.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         view_comp.setWindowIcon(icon)
+        view_comp.setMinimumSize(QtCore.QSize(650, 550))
+        view_comp.setMaximumSize(QtCore.QSize(650, 550))
+        self.cancelButton = QtWidgets.QPushButton(view_comp)
+        self.cancelButton.setGeometry(QtCore.QRect(560, 490, 75, 40))
+        font = QtGui.QFont()
         font.setFamily("Slate For OnePlus Medium")
         font.setPointSize(1)
         font.setBold(False)
@@ -52,7 +52,7 @@ class Ui_view_comp(object):
 "}")
         self.cancelButton.setObjectName("cancelButton")
         self.formLayoutWidget = QtWidgets.QWidget(view_comp)
-        self.formLayoutWidget.setGeometry(QtCore.QRect(10, 263, 631, 191))
+        self.formLayoutWidget.setGeometry(QtCore.QRect(30, 290, 591, 171))
         self.formLayoutWidget.setObjectName("formLayoutWidget")
         self.formLayout = QtWidgets.QFormLayout(self.formLayoutWidget)
         self.formLayout.setSizeConstraint(QtWidgets.QLayout.SetDefaultConstraint)
@@ -142,15 +142,17 @@ class Ui_view_comp(object):
         self.MAINLABEL.setStyleSheet("font: 57 22pt \"Slate For OnePlus Medium\";\n"
 "color: #ffffff;\n"
 "background-color:#01579B;")
+        self.MAINLABEL.setText("")
         self.MAINLABEL.setAlignment(QtCore.Qt.AlignCenter)
         self.MAINLABEL.setObjectName("MAINLABEL")
         self.label_2 = QtWidgets.QLabel(view_comp)
-        self.label_2.setGeometry(QtCore.QRect(-30, 90, 731, 551))
-        self.label_2.setStyleSheet("background-color:#ffffff")
+        self.label_2.setGeometry(QtCore.QRect(0, 70, 651, 551))
+        self.label_2.setStyleSheet("background-color:#ffffff;\n"
+"border-radius: 15px;")
         self.label_2.setText("")
         self.label_2.setObjectName("label_2")
         self.searchButton = QtWidgets.QPushButton(view_comp)
-        self.searchButton.setGeometry(QtCore.QRect(470, 160, 171, 51))
+        self.searchButton.setGeometry(QtCore.QRect(470, 180, 171, 51))
         self.searchButton.setMinimumSize(QtCore.QSize(0, 40))
         self.searchButton.setStyleSheet("#searchButton{\n"
 "    font: 57 8pt \"Slate For OnePlus Medium\";\n"
@@ -171,7 +173,7 @@ class Ui_view_comp(object):
 "}")
         self.searchButton.setObjectName("searchButton")
         self.enterCid = QtWidgets.QLineEdit(view_comp)
-        self.enterCid.setGeometry(QtCore.QRect(170, 110, 471, 40))
+        self.enterCid.setGeometry(QtCore.QRect(170, 130, 471, 40))
         self.enterCid.setMinimumSize(QtCore.QSize(300, 40))
         font = QtGui.QFont()
         font.setFamily("Slate For OnePlus")
@@ -201,7 +203,7 @@ class Ui_view_comp(object):
         self.enterCid.setClearButtonEnabled(False)
         self.enterCid.setObjectName("enterCid")
         self.labelCid = QtWidgets.QLabel(view_comp)
-        self.labelCid.setGeometry(QtCore.QRect(10, 110, 141, 40))
+        self.labelCid.setGeometry(QtCore.QRect(10, 130, 141, 40))
         self.labelCid.setMinimumSize(QtCore.QSize(0, 40))
         font = QtGui.QFont()
         font.setFamily("Slate For OnePlus BK")
@@ -213,12 +215,12 @@ class Ui_view_comp(object):
         self.labelCid.setStyleSheet("font: 57 12pt \"Slate For OnePlus BK\";")
         self.labelCid.setObjectName("labelCid")
         self.line = QtWidgets.QFrame(view_comp)
-        self.line.setGeometry(QtCore.QRect(-50, 230, 800, 3))
+        self.line.setGeometry(QtCore.QRect(22, 250, 611, 4))
         self.line.setFrameShape(QtWidgets.QFrame.HLine)
         self.line.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.line.setObjectName("line")
         self.searchCid = QtWidgets.QPushButton(view_comp)
-        self.searchCid.setGeometry(QtCore.QRect(560, 110, 81, 40))
+        self.searchCid.setGeometry(QtCore.QRect(560, 130, 81, 40))
         self.searchCid.setMinimumSize(QtCore.QSize(0, 40))
         self.searchCid.setStyleSheet("#searchCid{background-color: transparent;\n"
 "border-color: transparent;\n"
@@ -251,41 +253,44 @@ class Ui_view_comp(object):
 "}")
         self.searchCid.setObjectName("searchCid")
         self.addComponent = QtWidgets.QPushButton(view_comp)
-        self.addComponent.setGeometry(QtCore.QRect(320, 170, 151, 31))
+        self.addComponent.setGeometry(QtCore.QRect(320, 180, 151, 51))
         self.addComponent.setStyleSheet("#addComponent{\n"
+"    font: 57 8pt \"Slate For OnePlus Medium\";\n"
+"    text-decoration: underline;\n"
+"color:rgb(65, 131, 197);\n"
 "background-color: transparent;\n"
-"border-color:transparent;\n"
-"color: blue;\n"
-"font: 8pt \"Slate For OnePlus Bk\";\n"
+"border-color: transparent;\n"
+"selection-color: transparent;\n"
+"selection-background-color:transparent;\n"
+"gridline-color: transparent;\n"
 "}\n"
 "#addComponent:hover{\n"
-"background-color: transparent;\n"
-"border-color:transparent;\n"
-"font: 8pt \"Slate For OnePlus Bk\";\n"
-"text-decoration: underline;\n"
+"color:rgb(0, 0, 127);\n"
+"    font: 57 8pt \"Slate For OnePlus Medium\";\n"
+"    text-decoration: underline;\n"
 "}\n"
 "#addComponent:pressed{\n"
-"background-color: transparent;\n"
-"border-color:transparent;\n"
-"color: #29b6f6;\n"
-"font: 8pt \"Slate For OnePlus Bk\";\n"
+"color:purple;\n"
+"    font: 57 8pt \"Slate For OnePlus Medium\";\n"
+"    text-decoration: underline;\n"
 "}")
         self.addComponent.setObjectName("addComponent")
         self.issueComponent = QtWidgets.QPushButton(view_comp)
-        self.issueComponent.setGeometry(QtCore.QRect(330, 465, 60, 60))
+        self.issueComponent.setGeometry(QtCore.QRect(410, 470, 60, 60))
         self.issueComponent.setStyleSheet("#issueComponent {\n"
 "background-color:transparent;\n"
-"\n"
+"    border-image: url(:/admin/cart.png);\n"
 "border-color:transparent;\n"
 "border-style:outset;\n"
 "border-radius:30px;\n"
 "}\n"
 "\n"
 "#issueComponent:hover {\n"
-"    background-color:#0277BD;\n"
+"    background-color:#087F22;\n"
 "    border-color:transparent;\n"
 "    border-radius:30px;\n"
 "    border-style:outset;\n"
+"    border-image: url(:/admin/cart2.png);\n"
 "}\n"
 "\n"
 "#issueComponent:pressed {\n"
@@ -296,25 +301,23 @@ class Ui_view_comp(object):
 "    border-style:inset;\n"
 "}")
         self.issueComponent.setText("")
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(":/others/cart-add-icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.issueComponent.setIcon(icon)
         self.issueComponent.setIconSize(QtCore.QSize(50, 50))
         self.issueComponent.setObjectName("issueComponent")
         self.modifyComponent = QtWidgets.QPushButton(view_comp)
-        self.modifyComponent.setGeometry(QtCore.QRect(230, 470, 50, 50))
+        self.modifyComponent.setGeometry(QtCore.QRect(250, 470, 60, 60))
         self.modifyComponent.setStyleSheet("#modifyComponent {\n"
 "background-color:transparent;\n"
-"\n"
-"border-color:transparent;\n"
+"    border-image: url(:/others/modify.png);\n"
+"border-color:#4D4D4C;\n"
 "border-style:outset;\n"
-"border-radius:25px;\n"
+"border-radius:30px;\n"
 "}\n"
 "\n"
 "#modifyComponent:hover {\n"
-"    background-color:#0277BD;\n"
 "    border-color:transparent;\n"
-"    border-radius:25px;\n"
+"    border-radius:30px;\n"
+"    border-image: url(:/others/modify2.png);\n"
+"    background-color: rgb(25, 118, 210);\n"
 "}\n"
 "\n"
 "#modifyComponent:pressed {\n"
@@ -323,25 +326,30 @@ class Ui_view_comp(object):
 "    border-style:inset;\n"
 "}")
         self.modifyComponent.setText("")
-        icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap(":/others/edit_user-512.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.modifyComponent.setIcon(icon1)
         self.modifyComponent.setIconSize(QtCore.QSize(50, 50))
         self.modifyComponent.setObjectName("modifyComponent")
+        self.label = QtWidgets.QLabel(view_comp)
+        self.label.setGeometry(QtCore.QRect(0, 0, 651, 71))
+        self.label.setStyleSheet("font: 57 22pt \"Slate For OnePlus Medium\";\n"
+"color: #ffffff;\n"
+"background-color:transparent;")
+        self.label.setAlignment(QtCore.Qt.AlignCenter)
+        self.label.setObjectName("label")
         self.deleteComponent = QtWidgets.QPushButton(view_comp)
-        self.deleteComponent.setGeometry(QtCore.QRect(130, 470, 50, 50))
+        self.deleteComponent.setGeometry(QtCore.QRect(110, 470, 60, 60))
         self.deleteComponent.setStyleSheet("#deleteComponent {\n"
-"background-color:transparent;\n"
-"border-color:transparent;\n"
-"border-style:outset;\n"
-"border-radius:25px;\n"
-"}\n"
+"background-color: transparent;\n"
 "\n"
+"border-style: inset;\n"
+"border-radius:30px;\n"
+"border-image:url(:/others/lel_delete.png);\n"
+"}\n"
 "#deleteComponent:hover {\n"
-"    background-color: red;\n"
-"    border-color:transparent;\n"
-"    border-radius:25px;\n"
+"    background-color: #DC3333;\n"
+"    \n"
+"    border-radius:30px;\n"
 "    border-style:outset;\n"
+"    border-image: url(:/others/lel_delete2.png);\n"
 "}\n"
 "\n"
 "#deleteComponent:pressed {\n"
@@ -351,18 +359,12 @@ class Ui_view_comp(object):
 "    border-style:inset;\n"
 "}")
         self.deleteComponent.setText("")
-        icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap(":/others/Delete-Anti-Revoke.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.deleteComponent.setIcon(icon2)
         self.deleteComponent.setIconSize(QtCore.QSize(50, 50))
         self.deleteComponent.setObjectName("deleteComponent")
-        self.deleteComponent.setEnabled(False)
-        self.issueComponent.setEnabled(False)
-        self.modifyComponent.setEnabled(False)
+        self.MAINLABEL.raise_()
         self.label_2.raise_()
         self.cancelButton.raise_()
         self.formLayoutWidget.raise_()
-        self.MAINLABEL.raise_()
         self.searchButton.raise_()
         self.enterCid.raise_()
         self.labelCid.raise_()
@@ -371,6 +373,7 @@ class Ui_view_comp(object):
         self.addComponent.raise_()
         self.issueComponent.raise_()
         self.modifyComponent.raise_()
+        self.label.raise_()
         self.deleteComponent.raise_()
         self.searchButton.clicked.connect(lambda: self.searchComponent(view_comp))
         self.deleteComponent.clicked.connect(lambda: self.delete_Component(view_comp))
@@ -379,9 +382,10 @@ class Ui_view_comp(object):
         self.issueComponent.clicked.connect(lambda:self.openIssueComponent(view_comp))
         self.addComponent.clicked.connect(self.openAddComponent)
         self.cancelButton.clicked.connect(view_comp.close)
+
         self.retranslateUi(view_comp)
         QtCore.QMetaObject.connectSlotsByName(view_comp)
-    
+
     def openAddComponent(self):
         from add_comp import Ui_add_comp
         self.window5=QtWidgets.QWidget()
@@ -439,12 +443,14 @@ class Ui_view_comp(object):
             self.searchCid.setEnabled(False)
             self.deleteComponent.setEnabled(True)
             self.issueComponent.setEnabled(True)
-            self.modifyComponent.setEnabled(True) 
-        
+            self.modifyComponent.setEnabled(True)
+
+
+
     def retranslateUi(self, view_comp):
         _translate = QtCore.QCoreApplication.translate
         view_comp.setWindowTitle(_translate("view_comp", "Component Details"))
-        self.cancelButton.setText(_translate("view_comp", "Cancel"))
+        self.cancelButton.setText(_translate("view_comp", "CANCEL"))
         self.cancelButton.setShortcut(_translate("view_comp", "Esc"))
         self.labelName.setText(_translate("view_comp", "Component Name:"))
         self.showName.setText(_translate("view_comp", "Please enter Component ID"))
@@ -452,15 +458,16 @@ class Ui_view_comp(object):
         self.showStock.setText(_translate("view_comp", "Please enter Component ID"))
         self.labelLab.setText(_translate("view_comp", "Lab:"))
         self.showLab.setText(_translate("view_comp", "Please enter Component ID"))
-        self.MAINLABEL.setText(_translate("view_comp", "Component Details"))
-        self.searchButton.setText(_translate("view_comp", "Search"))
+        self.searchButton.setText(_translate("view_comp", "SEARCH"))
         self.enterCid.setPlaceholderText(_translate("view_comp", "Component Product ID/Barcode No."))
-        self.labelCid.setText(_translate("view_comp", "Component ID"))
+        self.labelCid.setText(_translate("view_comp", "Component ID:"))
         self.searchCid.setText(_translate("view_comp", "GET ID"))
         self.addComponent.setText(_translate("view_comp", "Add New Component?"))
         self.issueComponent.setToolTip(_translate("view_comp", "<html><head/><body><p>Issue Component</p></body></html>"))
         self.modifyComponent.setToolTip(_translate("view_comp", "<html><head/><body><p>Modify Component</p></body></html>"))
-        self.deleteComponent.setToolTip(_translate("view_comp", "<html><head/><body><p>Delete Component</p></body></html>"))
+        self.modifyComponent.setWhatsThis(_translate("view_comp", "<html><head/><body><p>Modify Component</p></body></html>"))
+        self.label.setText(_translate("view_comp", "Component Details"))
+        self.deleteComponent.setWhatsThis(_translate("view_comp", "<html><head/><body><p>Delete Component</p></body></html>"))
 
 import icons_rc
 
